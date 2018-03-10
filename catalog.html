@@ -99,7 +99,7 @@
 						<table class="cart-content">
 							<tr>
 								<td>
-									<button class="delete" type="button" name="delete" id="delete" aria-label="Удалить">
+									<button class="delete" type="button" name="delete" aria-label="Удалить">
 									Удалить
 									</button>
 								</td>
@@ -115,7 +115,7 @@
 							</tr>  
 							<tr>
 								<td>
-									<button class="delete" type="button" name="delete" id="delete" aria-label="Удалить">
+									<button class="delete" type="button" name="delete" aria-label="Удалить">
 									Удалить
 									</button>
 								</td>
@@ -191,7 +191,7 @@
 					</div>
 					
 					<div class="cost-container">
-						<label for="cost-range">
+						<label>
 							Цена: 100 руб. - 500 руб.
 						</label> 
 						
@@ -206,48 +206,71 @@
 					<div class="fat-container">
 						<fieldset>
 							<legend>Жирность:</legend>
-							<label>
-								<input type="radio" name="fat" value="0">
-								0%
-							</label>
-							<label>
-								<input type="radio" name="fat" value="10" checked>
-								до 10%
-							</label>
-							<label>
-								<input type="radio" name="fat" value="30">
-								до 30%
-							</label>
-							<label>
-								<input type="radio" name="fat" value="100">
-								выше 30%
-							</label>
+
+							<ul>
+								<li class="filter-option">
+									<input class="visually-hidden filter-radio" type="radio" name="fat" id="fat-0%" value="0">
+									<label for="fat-0%">
+										0%
+									</label>
+								</li>
+								<li class="filter-option">
+									<input class="visually-hidden filter-radio" type="radio" name="fat" id="fat-till-10%" value="10" checked>
+									<label for="fat-till-10%">
+										до 10%
+									</label>
+								</li>
+								<li class="filter-option">
+									<input class="visually-hidden filter-radio" type="radio" name="fat" id="fat-till-30%" value="30">
+									<label for="fat-till-30%">
+										до 30%
+									</label>
+								</li>
+								<li class="filter-option">
+									<input class="visually-hidden filter-radio" type="radio" name="fat" id="fat-more-30%" value="100">
+									<label for="fat-more-30%">
+										выше 30%
+									</label>
+								</li>
+							</ul>
 						</fieldset>
 					</div>
 					
 					<div class="filler-container">
 						<fieldset>
 							<legend>Наполнители:</legend>
-							<label>
-								<input type="checkbox" name="choco" value="choco" checked>
-								Шоколадные
-							</label>
-							<label>
-								<input type="checkbox" name="sug-coat" value="sug-coat" checked>
-								Сахарные присыпки
-							</label>
-							<label>
-								<input type="checkbox" name="fruit" value="fruit">
-								Фрукты
-							</label>
-							<label>
-								<input type="checkbox" name="syrup" value="syrup">
-								Сиропы
-							</label>
-							<label>
-								<input type="checkbox" name="jam" value="jam">
-								Джемы
-							</label>
+								<ul>
+									<li>
+										<input class="visually-hidden filter-checkbox" type="checkbox" name="choco" id="choco" value="choco" checked>
+										<label for="choco">
+											Шоколадные
+										</label>
+									</li>
+									<li>
+										<input class="visually-hidden filter-checkbox" type="checkbox" name="sug-coat" id="sug-coat" value="sug-coat" checked>
+										<label for="sug-coat">
+											Сахарные присыпки
+										</label>
+									</li>
+									<li>
+										<input class="visually-hidden filter-checkbox" type="checkbox" name="fruit" id="fruit" value="fruit">
+										<label for="fruit">
+											Фрукты
+										</label>
+									</li>
+									<li>
+										<input class="visually-hidden filter-checkbox" type="checkbox" name="syrup" id="syrup" value="syrup">
+										<label for="syrup">
+											Сиропы
+										</label>
+									</li>
+									<li>
+										<input class="visually-hidden filter-checkbox" type="checkbox" name="jam" id="jam" value="jam">
+										<label for="jam">
+											Джемы
+										</label>
+									</li>
+								</ul>
 						</fieldset>
 					</div>
 
