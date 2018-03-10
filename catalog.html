@@ -49,48 +49,88 @@
 
 		<div class="main-user-buttons">
 			<ul class="user-buttons-list">
-				<li class="search-button">
-					<a class="user-btn search-link" href="#"></a>
+				<li class="user-search-button">
+					<button class="user-btn search-button" type="button" aria-label="Поиск по сайту"></button>
 					<div class="search-overlay">
-						<p>
-							<!-- текстовое поле для введения поискового запроса -->
-						</p>
+						<form action="https://htmlacademy.ru/echo" method="get">
+							<p>
+								<label for="search-field" class="visually-hidden">
+									Поиск по сайту
+								</label>
+								<input type="search" name="search-field" id="search-field" placeholder="Что ищем?">
+							</p>
+						</form>
 					</div>
 				</li>
-				<li class="login-button">
-					<a class="user-btn login-link" href="#">Вход</a>
+				<li class="user-login-button">
+					<a class="user-btn login-link" href="#">
+						Вход
+					</a>
 					<div class="login-overlay">
-						<!-- текстовое поле -->
-						<!-- текстовое поле -->
-						<button class="act-button" type="submit">Войти</button>
+						<form name="login-form" action="https://htmlacademy.ru/echo" method="post">
+							<p>
+								<label for="email-field" class="visually-hidden">E-mail</label>
+								<input type="email" name="email-field" id="email-field" placeholder="Электронная почта" required>
+							</p>
+							<p>
+								<label for="password-field" class="visually-hidden">Пароль</label>
+								<input type="password" name="password-field" id="password-field" placeholder="Пароль" required>
+							</p>
+								<button class="act-button" type="submit" name="login-button">
+									Войти
+								</button>
+						</form>
 						<ul class="login-hints">
 							<li class="forgot-pass">
-								<a href="#">Забыли пароль?</a>
+								<a href="#" target="_blank">Забыли пароль?</a>
 							</li>
 							<li class="new-reg">
-								<a href="#">Новая регистрация</a>
+								<a href="#" target="_blank">Новая регистрация</a>
 							</li>
 						</ul>
 					</div>
 				</li>
 				<li class="cart-button">
-					<a class="user-btn cart-link"  href="#">2 товара</a>
+					<a class="user-btn cart-link" href="#">
+						2 товара
+					</a>
 					<div class="cart-container">
 
 						<table class="cart-content">
 							<tr>
-								<td><span class="delete">x</span></td>
-								<td><img src="img/small-pic-1" width="30" height="30" alt="Лот 'Название' 1"></td>
-								<td><span>1,5 кг x</span> <span>200 руб.</span></td>
-								<td>300 руб.</td>
+								<td>
+									<button class="delete" type="button" name="delete" id="delete" aria-label="Удалить">
+									Удалить
+									</button>
+								</td>
+								<td>
+									<img src="img/small-pic-1" width="30" height="30" alt="Название мороженого 1">
+								</td>
+								<td>
+									<span>1,5 кг x</span> <span>200 руб.</span>
+								</td>
+								<td>
+									300 руб.
+								</td>
 							</tr>  
 							<tr>
-								<td><span class="delete">x</span></td>
-								<td><img src="img/small-pic-2" width="30" height="30" alt="Лот 'Название' 2"></td>
-								<td><span>1,5 кг x</span> <span>300 руб.</span></td>
-								<td>450 руб.</td>
+								<td>
+									<button class="delete" type="button" name="delete" id="delete" aria-label="Удалить">
+									Удалить
+									</button>
+								</td>
+								<td>
+									<img src="img/small-pic-2" width="30" height="30" alt="Название мороженого 2">
+								</td>
+								<td>
+									<span>1,5 кг x</span> <span>300 руб.</span>
+								</td>
+								<td>
+									450 руб.
+								</td>
 							</tr>
 						</table>
+						<hr>
 						<p>Итого: 750 руб.</p>
 						<a class="act-button" href="#">Оформить заказ</a>
 					</div>
@@ -99,9 +139,13 @@
 		</div>
 		
 		<div class="header-contacts">
-			<p class="header-contacts-phone"><span>с 10 до 20 ежедневно</span><p> 
-				<p><strong>8 818 450-25-25</strong></p>
-			</div>
+			<p class="header-contacts-phone">
+				<span>с 10 до 20 ежедневно</span>
+			</p> 
+			<p>
+				<strong>8 818 450-25-25</strong>
+			</p>
+		</div>
 
 		</header>
 
@@ -110,9 +154,19 @@
 
 			<div class="breadcrumbs">
 				<ul class="breadcrumbs-list">
-					<li class="bc-item"><a href="index.html">Главная</a></li>
-					<li class="bc-item"><a href="catalog.html">Каталог</a></li>
-					<li class="bc-item bc-current">Сливочное</li>
+					<li class="bc-item">
+						<a href="index.html">
+							Главная
+						</a>
+					</li>
+					<li class="bc-item">
+						<a href="catalog.html">
+							Каталог
+						</a>
+					</li>
+					<li class="bc-item bc-current">
+						Сливочное
+					</li>
 				</ul>
 			</div>
 
@@ -120,7 +174,85 @@
 
 			<section class="filter-catalog">
 				<h2 class="visually-hidden">Фильтр продукции</h2>
-				<!-- большая форма -->
+
+				<form name="filter-form" action="https://htmlacademy.ru/echo" method="get">
+					
+					<div class="sort-container">
+						<label for="sorting">
+							Сортировка:
+						</label>
+						<p>
+							<select name="sort" id="sorting" size="1">
+								<option value="popular">по популярности</option>
+								<option value="fatness">по жирности</option>
+								<option value="cost">по цене</option>
+							</select>
+						</p>
+					</div>
+					
+					<div class="cost-container">
+						<label for="cost-range">
+							Цена: 100 руб. - 500 руб.
+						</label> 
+						
+						<div class="range-container">
+							<button type="button" name="slider-1" aria-label="Минимальная цена">min</button>
+							<button type="button" name="slider-2" aria-label="Максимальная цена">max</button>
+						</div>
+
+						<!-- <input type="range" name="cost-range" id="cost-range" min="0" max="800" step="50" value="500"> -->
+					</div>
+					
+					<div class="fat-container">
+						<fieldset>
+							<legend>Жирность:</legend>
+							<label>
+								<input type="radio" name="fat" value="0">
+								0%
+							</label>
+							<label>
+								<input type="radio" name="fat" value="10" checked>
+								до 10%
+							</label>
+							<label>
+								<input type="radio" name="fat" value="30">
+								до 30%
+							</label>
+							<label>
+								<input type="radio" name="fat" value="100">
+								выше 30%
+							</label>
+						</fieldset>
+					</div>
+					
+					<div class="filler-container">
+						<fieldset>
+							<legend>Наполнители:</legend>
+							<label>
+								<input type="checkbox" name="choco" value="choco" checked>
+								Шоколадные
+							</label>
+							<label>
+								<input type="checkbox" name="sug-coat" value="sug-coat" checked>
+								Сахарные присыпки
+							</label>
+							<label>
+								<input type="checkbox" name="fruit" value="fruit">
+								Фрукты
+							</label>
+							<label>
+								<input type="checkbox" name="syrup" value="syrup">
+								Сиропы
+							</label>
+							<label>
+								<input type="checkbox" name="jam" value="jam">
+								Джемы
+							</label>
+						</fieldset>
+					</div>
+
+					<button type="submit" name="filter-use" id="filter-use">Применить</button>
+				</form>
 			</section>
 
 			<section class="catalog">
@@ -139,7 +271,9 @@
 								</p>
 							</div>
 							<p>
-								<a class="act-button" href="#">Быстрый просмотр</a>
+								<button class="act-button" type="button" name="btn-item-show">
+									Быстрый просмотр
+								</button>
 							</p>
 						</div>
 					</li>
@@ -155,7 +289,9 @@
 								</p>
 							</div>
 							<p>
-								<a class="act-button" href="#">Быстрый просмотр</a>
+								<button class="act-button" type="button" name="btn-item-show">
+									Быстрый просмотр
+								</button>
 							</p>
 						</div>
 					</li>
@@ -171,7 +307,9 @@
 								</p>
 							</div>
 							<p>
-								<a class="act-button" href="#">Быстрый просмотр</a>
+								<button class="act-button" type="button" name="btn-item-show">
+									Быстрый просмотр
+								</button>
 							</p>
 						</div>
 					</li>
@@ -187,7 +325,9 @@
 								</p>
 							</div>
 							<p>
-								<a class="act-button" href="#">Быстрый просмотр</a>
+								<button class="act-button" type="button" name="btn-item-show">
+									Быстрый просмотр
+								</button>
 							</p>
 						</div>
 					</li>
@@ -203,7 +343,9 @@
 								</p>
 							</div>
 							<p>
-								<a class="act-button" href="#">Быстрый просмотр</a>
+								<button class="act-button" type="button" name="btn-item-show">
+									Быстрый просмотр
+								</button>
 							</p>
 						</div>
 					</li>
@@ -219,7 +361,9 @@
 								</p>
 							</div>
 							<p>
-								<a class="act-button" href="#">Быстрый просмотр</a>
+								<button class="act-button" type="button" name="btn-item-show">
+									Быстрый просмотр
+								</button>
 							</p>
 						</div>
 					</li>
@@ -235,7 +379,9 @@
 								</p>
 							</div>
 							<p>
-								<a class="act-button" href="#">Быстрый просмотр</a>
+								<button class="act-button" type="button" name="btn-item-show">
+									Быстрый просмотр
+								</button>
 							</p>
 						</div>
 					</li>
@@ -251,7 +397,9 @@
 								</p>
 							</div>
 							<p>
-								<a class="act-button" href="#">Быстрый просмотр</a>
+								<button class="act-button" type="button" name="btn-item-show">
+									Быстрый просмотр
+								</button>
 							</p>
 						</div>
 					</li>
@@ -267,7 +415,9 @@
 								</p>
 							</div>
 							<p>
-								<a class="act-button" href="#">Быстрый просмотр</a>
+								<button class="act-button" type="button" name="btn-item-show">
+									Быстрый просмотр
+								</button>
 							</p>
 						</div>
 					</li>
@@ -283,7 +433,9 @@
 								</p>
 							</div>
 							<p>
-								<a class="act-button" href="#">Быстрый просмотр</a>
+								<button class="act-button" type="button" name="btn-item-show">
+									Быстрый просмотр
+								</button>
 							</p>
 						</div>
 					</li>
@@ -299,7 +451,9 @@
 								</p>
 							</div>
 							<p>
-								<a class="act-button" href="#">Быстрый просмотр</a>
+								<button class="act-button" type="button" name="btn-item-show">
+									Быстрый просмотр
+								</button>
 							</p>
 						</div>
 					</li>
@@ -315,7 +469,9 @@
 								</p>
 							</div>
 							<p>
-								<a class="act-button" href="#">Быстрый просмотр</a>
+								<button class="act-button" type="button" name="btn-item-show">
+									Быстрый просмотр
+								</button>
 							</p>
 						</div>
 					</li>
@@ -324,29 +480,31 @@
 
 			<div class="pagination">
 				<ul class="pagination-list">
-					<li class="pagination-arrow-left">
-						<a href="#">&laquo;</a>
+					<li class="pagination-prev">
+						<a class="pag-disabled" href="#" aria-label="Назад">Назад</a>
 					</li>
-					<li class="pagination-item pagination-item-current">
+					<li class="pag-current">
 						<a>1</a>
 					</li>
-					<li class="pagination-item">
+					<li>
 						<a href="#">2</a>
 					</li>
-					<li class="pagination-item">
+					<li>
 						<a href="#">3</a>
 					</li>
-					<li class="pagination-item">
+					<li>
 						<a href="#">4</a>
 					</li>
-					<li class="pagination-item">
+					<li>
 						<a href="#">5</a>
 					</li>
-					<li class="pagination-arrow-right">
-						<a href="#">&raquo;</a>
+					<li class="pagination-next">
+						<a href="#" aria-label="Вперёд">Вперёд</a>
 					</li>
 				</ul>
 			</div>
+
+			<hr>
 
 		</main>
 
@@ -356,25 +514,41 @@
 			<div class="footer-social">
 
 				<ul class="social-button-list">
-					<li><a class="social-button" href="#">Твиттер</a></li>
-					<li><a class="social-button" href="#">Инстаграм</a></li>
-					<li><a class="social-button" href="#">Фейсбук</a></li>
-					<li><a class="social-button" href="#">Вконтакте</a></li>
+					<li>
+						<a class="social social-tw" href="#">Твиттер</a>
+					</li>
+					<li>
+						<a class="social social-in" href="#">Инстаграм</a>
+					</li>
+					<li>
+						<a class="social social-fb" href="#">Фейсбук</a>
+					</li>
+					<li>
+						<a class="social social-vk" href="#">Вконтакте</a>
+					</li>
 				</ul>
 			</div>
 
 			<div class="footer-info">
 				<ul class="info-list">
-					<li class="info-item"><a href="#">Для поставщиков</a></li>
-					<li class="info-item"><a href="#">О производстве</a></li>
-					<li class="info-item"><a href="#">Наши документы</a></li>
-					<li class="info-item"><a href="#">экологические стандарты</a></li>
+					<li class="info-item">
+						<a href="#">Для поставщиков</a>
+					</li>
+					<li class="info-item">
+						<a href="#">О производстве</a>
+					</li>
+					<li class="info-item">
+						<a href="#">Наши документы</a>
+					</li>
+					<li class="info-item">
+						<a href="#">Экологические стандарты</a>
+					</li>
 				</ul>
 			</div>
 
 			<div class="footer-copyright">
 				<a href="https://htmlacademy.ru/intensive/htmlcss">
-					<img src="footer-logo" width="100" height="50" alt="HTMLacademy">
+					<img src="img/logo-htmlacademy.svg" width="108" height="39" alt="HTMLacademy">
 				</a>
 				<p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2017</p>
 			</div>
