@@ -50,11 +50,11 @@
 		<div class="main-user-buttons">
 			<ul class="user-buttons-list">
 				<li class="user-search-button">
-					<button class="user-btn search-button" type="button" aria-label="Поиск по сайту"></button>
+					<a class="user-btn search-link" href="#" aria-label="Поиск по сайту"></a>
 					<div class="search-overlay">
 						<form action="https://htmlacademy.ru/echo" method="get">
 							<p>
-								<label for="search-field" class="visually-hidden">
+								<label class="visually-hidden" for="search-field">
 									Поиск по сайту
 								</label>
 								<input type="search" name="search-field" id="search-field" placeholder="Что ищем?">
@@ -69,11 +69,11 @@
 					<div class="login-overlay">
 						<form name="login-form" action="https://htmlacademy.ru/echo" method="post">
 							<p>
-								<label for="email-field" class="visually-hidden">E-mail</label>
+								<label class="visually-hidden" for="email-field">E-mail</label>
 								<input type="email" name="email-field" id="email-field" placeholder="Электронная почта" required>
 							</p>
 							<p>
-								<label for="password-field" class="visually-hidden">Пароль</label>
+								<label class="visually-hidden" for="password-field">Пароль</label>
 								<input type="password" name="password-field" id="password-field" placeholder="Пароль" required>
 							</p>
 								<button class="act-button" type="submit" name="login-button">
@@ -100,7 +100,7 @@
 							<tr>
 								<td>
 									<button class="delete" type="button" name="delete" aria-label="Удалить">
-									Удалить
+										Удалить
 									</button>
 								</td>
 								<td>
@@ -116,7 +116,7 @@
 							<tr>
 								<td>
 									<button class="delete" type="button" name="delete" aria-label="Удалить">
-									Удалить
+										Удалить
 									</button>
 								</td>
 								<td>
@@ -140,10 +140,7 @@
 		
 		<div class="header-contacts">
 			<p class="header-contacts-phone">
-				<span>с 10 до 20 ежедневно</span>
-			</p> 
-			<p>
-				<strong>8 818 450-25-25</strong>
+				<span>с 10 до 20 ежедневно</span> <strong>8 818 450-25-25</strong>
 			</p>
 		</div>
 
@@ -200,7 +197,21 @@
 							<button type="button" name="slider-2" aria-label="Максимальная цена">max</button>
 						</div>
 
-						<!-- <input type="range" name="cost-range" id="cost-range" min="0" max="800" step="50" value="500"> -->
+						<!-- Визуальная имитация -->
+						<!-- <div class="double-range-form">
+							<p>
+								Цена: 
+							</p>
+							<p>
+								<output name="minoutput">100</output> руб. - <output name="maxoutput">700</output> руб.
+							</p>
+							<p>
+								<input type="range" name="range-1" id="mincount" min="0" max="500" step="50" value="100" oninput="minoutput.value=mincount.value">
+								<input type="range" name="range-2" id="maxcount" min="501" max="1000" step="50" value="700" oninput="maxoutput.value=maxcount.value">
+							</p>
+								<label for="mincount" aria-label="Диапазон-1"></label>
+								<label for="maxcount" aria-label="Диапазон-2"></label>
+							</div> -->
 					</div>
 					
 					<div class="fat-container">
@@ -274,7 +285,9 @@
 						</fieldset>
 					</div>
 
-					<button type="submit" name="filter-use" id="filter-use">Применить</button>
+					<button class="filter-send" type="submit" name="filter-use" id="filter-use">
+						Применить
+					</button>
 				</form>
 			</section>
 
@@ -294,9 +307,7 @@
 								</p>
 							</div>
 							<p>
-								<button class="act-button" type="button" name="btn-item-show">
-									Быстрый просмотр
-								</button>
+								<a class="act-button" href="#">Быстрый просмотр</a>
 							</p>
 						</div>
 					</li>
@@ -312,9 +323,7 @@
 								</p>
 							</div>
 							<p>
-								<button class="act-button" type="button" name="btn-item-show">
-									Быстрый просмотр
-								</button>
+								<a class="act-button" href="#">Быстрый просмотр</a>
 							</p>
 						</div>
 					</li>
@@ -330,9 +339,7 @@
 								</p>
 							</div>
 							<p>
-								<button class="act-button" type="button" name="btn-item-show">
-									Быстрый просмотр
-								</button>
+								<a class="act-button" href="#">Быстрый просмотр</a>
 							</p>
 						</div>
 					</li>
@@ -348,9 +355,7 @@
 								</p>
 							</div>
 							<p>
-								<button class="act-button" type="button" name="btn-item-show">
-									Быстрый просмотр
-								</button>
+								<a class="act-button" href="#">Быстрый просмотр</a>
 							</p>
 						</div>
 					</li>
@@ -366,9 +371,7 @@
 								</p>
 							</div>
 							<p>
-								<button class="act-button" type="button" name="btn-item-show">
-									Быстрый просмотр
-								</button>
+								<a class="act-button" href="#">Быстрый просмотр</a>
 							</p>
 						</div>
 					</li>
@@ -384,9 +387,7 @@
 								</p>
 							</div>
 							<p>
-								<button class="act-button" type="button" name="btn-item-show">
-									Быстрый просмотр
-								</button>
+								<a class="act-button" href="#">Быстрый просмотр</a>
 							</p>
 						</div>
 					</li>
@@ -402,9 +403,7 @@
 								</p>
 							</div>
 							<p>
-								<button class="act-button" type="button" name="btn-item-show">
-									Быстрый просмотр
-								</button>
+								<a class="act-button" href="#">Быстрый просмотр</a>
 							</p>
 						</div>
 					</li>
@@ -420,9 +419,7 @@
 								</p>
 							</div>
 							<p>
-								<button class="act-button" type="button" name="btn-item-show">
-									Быстрый просмотр
-								</button>
+								<a class="act-button" href="#">Быстрый просмотр</a>
 							</p>
 						</div>
 					</li>
@@ -438,9 +435,7 @@
 								</p>
 							</div>
 							<p>
-								<button class="act-button" type="button" name="btn-item-show">
-									Быстрый просмотр
-								</button>
+								<a class="act-button" href="#">Быстрый просмотр</a>
 							</p>
 						</div>
 					</li>
@@ -456,9 +451,7 @@
 								</p>
 							</div>
 							<p>
-								<button class="act-button" type="button" name="btn-item-show">
-									Быстрый просмотр
-								</button>
+								<a class="act-button" href="#">Быстрый просмотр</a>
 							</p>
 						</div>
 					</li>
@@ -474,9 +467,7 @@
 								</p>
 							</div>
 							<p>
-								<button class="act-button" type="button" name="btn-item-show">
-									Быстрый просмотр
-								</button>
+								<a class="act-button" href="#">Быстрый просмотр</a>
 							</p>
 						</div>
 					</li>
@@ -492,9 +483,7 @@
 								</p>
 							</div>
 							<p>
-								<button class="act-button" type="button" name="btn-item-show">
-									Быстрый просмотр
-								</button>
+								<a class="act-button" href="#">Быстрый просмотр</a>
 							</p>
 						</div>
 					</li>
@@ -577,8 +566,6 @@
 			</div>
 
 		</footer>
-
-		<!-- Модальные -->
 
 		<script></script>	
 	</body>
