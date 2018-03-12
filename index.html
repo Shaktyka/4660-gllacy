@@ -49,39 +49,59 @@
 
 		<div class="main-user-buttons">
 			<ul class="user-buttons-list">
-				<li class="search-button">
-					<a class="user-btn search-link" href="#"></a>
+				<li class="user-search-button">
+					<a class="user-btn search-link" href="#" aria-label="Поиск по сайту"></a>
 					<div class="search-overlay">
-						<p>
-							<!-- текстовое поле для введения поискового запроса -->
-						</p>
+						<form name="search-form" action="https://htmlacademy.ru/echo" method="get">
+							<p>
+								<label class="visually-hidden" for="search-field">
+									Поиск по сайту
+								</label>
+								<input type="search" name="search-field" id="search-field" placeholder="Что ищем?">
+							</p>
+						</form>
 					</div>
 				</li>
-				<li class="login-button">
-					<a class="user-btn login-link" href="#">Вход</a>
+				<li class="user-login-button">
+					<a class="user-btn login-link" href="#">
+						Вход
+					</a>
 					<div class="login-overlay">
-						<!-- текстовое поле -->
-						<!-- текстовое поле -->
-						<button class="act-button" type="submit">Войти</button>
+						<form name="login-form" action="https://htmlacademy.ru/echo" method="post">
+							<p>
+								<label class="visually-hidden" for="email-field">E-mail</label>
+								<input type="email" name="email-field" id="email-field" placeholder="Электронная почта" required>
+							</p>
+							<p>
+								<label class="visually-hidden" for="password-field">Пароль</label>
+								<input type="password" name="password-field" id="password-field" placeholder="Пароль" required>
+							</p>
+								<button class="act-button" type="submit" name="login-button">
+									Войти
+								</button>
+						</form>
 						<ul class="login-hints">
 							<li class="forgot-pass">
-								<a href="#">Забыли пароль?</a>
+								<a href="#" target="_blank">Забыли пароль?</a>
 							</li>
 							<li class="new-reg">
-								<a href="#">Новая регистрация</a>
+								<a href="#" target="_blank">Новая регистрация</a>
 							</li>
 						</ul>
 					</div>
 				</li>
 				<li class="cart-button">
-					<a class="user-btn" href="#">Пусто</a>
+					<a class="user-btn cart-link" href="#">
+						Пусто
+					</a>
 				</li>
 			</ul>
 		</div>
 		
 		<div class="header-contacts">
-			<p class="header-contacts-phone"><span>с 10 до 20 ежедневно</span></p> 
-			<p><strong>8 818 450-25-25</strong></p>
+			<p class="header-contacts-phone">
+				<span>с 10 до 20 ежедневно</span> <strong>8 818 450-25-25</strong>
+			</p>
 		</div>
 		
 	</header>
@@ -99,24 +119,29 @@
 					<li class="slide-item">
 						<img class="slider-pic" src="img/double-ice-1.png" width="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом">
 						<p class="banner-slogan">Крем-брюле и пломбир с малиновым джемом</p>
-						<a class="act-button" href="#">Давайте оба!</a>
+						<a class="act-button" href="#">
+							Давайте оба!
+						</a>
 					</li>
 					<li class="slide-item">
 						<img class="slider-pic" src="img/double-ice-2.png" width="1065" height="859" alt="Шоколадный пломбир и лимонный сорбет">
 						<p class="banner-slogan">Шоколадный пломбир и лимонный сорбет</p>
-						<a class="act-button" href="#">Давайте оба!</a>
+						<a class="act-button" href="#">
+							Давайте оба!
+						</a>
 					</li>
 					<li class="slide-item">
 						<img class="slider-pic" src="img/double-ice-3.png" width="1079" height="854" alt="Пломбир с помадкой и клубничный щербет">
 						<p class="banner-slogan">Пломбир с помадкой и клубничный щербет</p>
-						<a class="act-button" href="#">Давайте оба!</a>
+						<a class="act-button" href="#">
+							Давайте оба!
+						</a>
 					</li>
 				</ul>
-				<span class="slider-btn slider-current"></span>
-				<span class="slider-btn"></span>
-				<span class="slider-btn"></span>
+				<a class="slid-current" href="#" aria-label="Слайд Крем-брюле и пломбир с малиновым джемом"></a>
+				<a class="slid-btn" href="#" aria-label="Слайд Шоколадный пломбир и лимонный сорбет"></a>
+				<a class="slid-btn" href="#" aria-label="Слайд Пломбир с помадкой и клубничный щербет"></a>
 			</div>
-
 		</section>
 
 		<section class="main-spec-offers">
@@ -241,17 +266,26 @@
 		<aside class="subscribe">
 			<h2 class="visually-hidden">Подписка на новости</h2>
 			<p class="subscribe-desc">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-			<!-- тут форма -->
-			<a class="act-button" href="#">Отправить</a>
+			<form name="subscribe-form" action="https://htmlacademy.ru/echo" method="post">
+				<p>
+					<label class="visually-hidden" for="subscr-email-field">E-mail</label>
+						<input type="email" name="subscr-email-field" id="subscr-email-field" placeholder="Электронная почта">
+				</p>
+			</form>
+			<button class="act-button" type="submit" name="subscribe">
+				Отправить
+			</button>
 		</aside>
 
 		<section class="map">	  
 			<h2 class="visually-hidden">Карта</h2>
 
 			<div class="main-map">
-				<a href="#">
-					<img src="img/map.jpg" width="1200" height="430" alt="Карта офиса по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-				</a>
+				<p>
+					<a href="#" aria-label="Карта офиса и магазина">
+						<img src="img/map-marker.jpg" width="1200" height="430" alt="Карта офиса по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+					</a>
+				</p>
 			</div>
 		</section>
 
@@ -259,17 +293,18 @@
 			<h2 class="visually-hidden">Контактная информация</h2>
 			<div class="main-contacts-container">
 				<div class="contacts-adress">
-					<p>Адрес главного офиса</p>
-					<p>и офлайн-магазина:</p>
-					<p><strong>ул. Большая Конюшенная</strong></p>
-						<p><strong>19/8, Санкт-Петербург</strong></p>
-					</div>
-					<div class="contacts-phone">
-						<p>Для заказов по телефону:</p>
-						<p><strong>8 818 450-25-25</strong></p>
-						<p>(с 10 до 20 ежедневно)</p>
-					</div>
-					<a class="act-button feedback-link" href="#">Форма обратной связи</a>
+					<p>
+						Адрес главного офиса и офлайн-магазина: <strong>ул. Большая Конюшенная</strong> <strong>19/8, Санкт-Петербург</strong>
+					</p>
+				</div>
+				<div class="contacts-phone">
+						<p>
+							Для заказов по телефону: <strong>8 818 450-25-25</strong> (с 10 до 20 ежедневно)
+						</p>
+				</div>
+				<a class="act-button feedback-link" href="#">
+					Форма обратной связи
+				</a>
 				</div>
 			</section>
 
@@ -280,25 +315,41 @@
 
 			<div class="footer-social">
 				<ul class="social-button-list">
-					<li class="social-button-tw"><a href="#">Твиттер</a></li>
-					<li class="social-button-in"><a href="#">Инстаграм</a></li>
-					<li class="social-button-fb"><a href="#">Фейсбук</a></li>
-					<li class="social-button-vk"><a href="#">Вконтакте</a></li>
+					<li>
+						<a class="social social-tw" href="#">Твиттер</a>
+					</li>
+					<li>
+						<a class="social social-in" href="#">Инстаграм</a>
+					</li>
+					<li>
+						<a class="social social-fb" href="#">Фейсбук</a>
+					</li>
+					<li>
+						<a class="social social-vk" href="#">Вконтакте</a>
+					</li>
 				</ul>
 			</div>
 
 			<div class="footer-info">
 				<ul class="info-list">
-					<li class="info-item"><a href="#">Для поставщиков</a></li>
-					<li class="info-item"><a href="#">О производстве</a></li>
-					<li class="info-item"><a href="#">Наши документы</a></li>
-					<li class="info-item"><a href="#">экологические стандарты</a></li>
+					<li class="info-item">
+						<a href="#">Для поставщиков</a>
+					</li>
+					<li class="info-item">
+						<a href="#">О производстве</a>
+					</li>
+					<li class="info-item">
+						<a href="#">Наши документы</a>
+					</li>
+					<li class="info-item">
+						<a href="#">экологические стандарты</a>
+					</li>
 				</ul>
 			</div>
 
 			<div class="footer-copyright">
 				<a href="https://htmlacademy.ru/intensive/htmlcss">
-					<img src="footer-logo" width="100" height="50" alt="HTMLacademy">
+					<img src="img/logo-htmlacademy.svg" width="108" height="39" alt="HTMLacademy">
 				</a>
 				<p class="copiright-text">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2017</p>
 			</div>
@@ -309,16 +360,39 @@
 
 		<section class="modal modal-feedback">
 			<h2 class="feedback-head">Мы обязательно вам ответим!</h2>
-			<!-- текстовое поле -->
-			<!-- текстовое поле -->
-			<!-- textarea -->
-			<button class="act-button" type="submit">Отправить</button>
-			<span class="modal-close">x</span>
+
+			<button class="modal-close" type="button" name="close">
+				Закрыть
+			</button>
+			<form name="feedback-form" action="https://htmlacademy.ru/echo" method="post">
+				<p>
+					<label class="visually-hidden" for="feedback-user-name">Ваше имя</label>
+						<input type="text" name="feedback-user-name" id="feedback-user-name" placeholder="Как вас зовут?" maxlength="50" required>
+				</p>
+				<p>
+					<label class="visually-hidden" for="feedback-user-email">Email</label>
+						<input type="email" name="feedback-user-email" id="feedback-user-email" placeholder="Ваша почта для ответа?" required>
+				</p>
+				<p>
+					<label class="visually-hidden" for="feedback-field">Ваше сообщение</label>
+					<textarea name="feedback-field" id="feedback-field" cols="30" rows="5" maxlength="2000">
+						Напишите что-нибудь...
+					</textarea>
+				</p>
+				<button class="act-button" type="submit">
+					Отправить
+				</button>
+			</form>
 		</section>
 
 		<section class="modal modal-map">
+			<button class="modal-close" type="button" name="close">
+				Закрыть
+			</button>
 			<h2 class="visually-hidden">Как до нас добраться</h2>
-			<span class="modal-close">x</span>
+				<p>
+					<img src="img/map-marker.jpg" width="1200" height="430" alt="Карта офиса по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+				</p>
 		</section>
 
 		<script></script>	
