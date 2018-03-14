@@ -1,1 +1,402 @@
-﻿
+﻿/* ОСНОВНОЕ */
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #ffffff;
+
+  background-color: #849d8f;
+}
+
+/* ВНУТРЕННЯЯ СТРАНИЦА */
+
+.site-navigation-current {
+  background-color: #d07058;
+}
+
+/* ССЫЛКИ, КНОПКИ */
+
+a {
+  text-decoration: none;
+}
+
+.act-button {
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+
+  border: none;
+}
+
+/* ОБЩИЕ СТИЛИ ДЛЯ ТЕКСТОВЫХ ПОЛЕЙ*/
+
+.text-field input,
+.textarea-field textarea {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #999999;
+
+  background-color: #ffffff;
+  border: 1px solid #b2b2b2;
+  border-radius: 5px;
+  opacity: 0.52;
+}
+
+.text-field input:hover,
+.textarea-field textarea:hover {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #999999;
+
+  border: 2px solid #9a9a9a;
+  border-radius: 5px;
+  opacity: 0.52;
+}
+
+.text-field input:focus,
+.textarea-field textarea:focus {
+  border: 2px solid #2e88e4;
+  border-radius: 5px;
+  opacity: 0.52;
+}
+
+
+/* ГЛАВНАЯ НАВИГАЦИЯ - разные параметры для меню сайта и меню пользователя */
+
+.site-navigation,
+.user-navigation,
+.drop-catalog-list {
+  list-style: none;
+}
+
+.site-navigation a {
+  line-height: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.user-navigation a {
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+  color: #333333;
+  text-decoration: none;
+  background-color: #f7f6f3; 
+}
+
+.user-navigation a:hover,
+.user-navigation a:focus {
+  color: #323232;
+  background-color: #f8f7f4;
+}
+
+.site-navigation a:active {
+  color: #333333;
+  background-color: #ededed;
+}
+
+/* СЛАЙДЕР */
+
+.slider-container ul {
+  list-style: none;
+}
+
+.slide-item {
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.slide-item a {
+  font-size: 32px;
+  line-height: 44px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.slide-switches {
+  list-style: none;
+} 
+
+.slide-switches a {
+  color: #ffffff;
+}
+
+/* СПЕЦ. ПРЕДЛОЖЕНИЯ */
+
+.offer-container-left {
+  background-color: #6d1527;
+  background-image: url("../img/rasp-back.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
+
+  border-radius: 10px;
+}
+
+.offer-container-right {
+  background-color: #3e251a;
+  background-image: url("../img/choc-back.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
+
+  border-radius: 10px;
+}
+
+.spec-offer h3 {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: bold;
+}
+
+.spec-offer p {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+}
+
+.spec-offer .act-button {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* ХИТЫ */
+
+.popular-items-list {
+  list-style: none;
+}
+
+.popular-item {
+  text-align: center;
+}
+
+.card-content-container a {
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.catalog-item-price {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.weight {
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 700;  
+}
+
+.card-overlay .act-button {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700; 
+}
+
+/* ФИЧИ */
+
+.features-container {
+  background-color: #eadec5;
+  background-image: url("../img/wafer-back.png");
+  background-position: 0 0;
+  background-repeat: repeat;
+
+  border-radius: 15px;
+}
+
+.features-slogan {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #323232;
+}
+
+.features-list {
+  list-style: none;
+}
+
+.features-item {
+  font-weight: 400;
+  color: #323232;
+}
+
+/* НОВОЕ В НАШЕМ БЛОГЕ */
+
+.blog-container {
+  background-color: #ffffff;
+  background-image: url("../img/straw-back.jpg");
+  background-position: bottom center;
+  background-repeat: repeat-y;
+
+  border-radius: 15px;
+}
+
+.blog-content p {
+  color: #323232;
+}
+
+.blog-content a {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #323232;
+
+  text-decoration: underline;
+}
+
+/* БЛОК ПОДПИСКИ - тут либо 2 блока один в другом, либо один и у него цветная рамка */
+
+.subscribe-container {
+  background-color: #f7f6f3;
+  /*background-image: url("../img/linear-back.png");*/
+  /*background-position: 0 0;
+  background-repeat: repeat;*/
+
+  border-radius: 15px;
+}
+
+.subscribe-desc {
+  font-weight: 400;
+  color: #5a5a5a;
+} 
+
+.subscribe-content button {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* КОНТАКТЫ */
+
+.contacts-container {
+  background-color: #fefefe;
+
+  border-radius: 15px;
+}
+
+.contacts-content {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #323232;
+}
+
+.contacts-content strong {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #323232;
+}
+
+.contacts-content .act-button {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #fefefe;
+
+  background-color: #f3866d; /*временно*/
+}
+
+/* ФУТЕР */
+
+.main-footer {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.main-footer a {
+  color: #fefefe;
+}
+
+.footer-social ul {
+  list-style: none;
+}
+
+.footer-info ul {
+  list-style: none;
+}
+
+.info-item:first-child {
+  font-weight: 700;
+}
+
+.footer-copyright p {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* ОКНО ПОИСКА */
+
+.search-overlay {
+  background-color: #f8f7f4;
+  border-radius: 6px;
+  width: 250px; /*для удобства*/
+  height: 50px; /*для удобства*/
+  padding: 30px; /*для удобства*/
+}
+
+/* ОКНО ВХОДА */
+
+.login-overlay {
+  background-color: #f8f7f4;
+  border-radius: 6px;
+}
+
+.login-hints {
+  list-style: none;
+}
+
+.login-hints a {
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #323232;
+}
+
+/* ОКНО ОБРАТНОЙ СВЯЗИ */
+
+.feedback-container {
+  background-color: #f8f7f4;
+  border-radius: 6px;
+}
+
+.feedback-content h2 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #323232;
+}
+
+.feedback-content .act-button {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+/* Для сокрытия чего не надо */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
