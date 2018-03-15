@@ -13,16 +13,13 @@ body {
   background-color: #849d8f;
 }
 
-/* ВНУТРЕННЯЯ СТРАНИЦА */
-
-.site-navigation-current {
-  background-color: #d07058;
-}
-
 /* ССЫЛКИ, КНОПКИ */
 
 a {
   text-decoration: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(255, 255, 255, 0.3); 
 }
 
 .act-button {
@@ -32,6 +29,12 @@ a {
   vertical-align: middle;
 
   border: none;
+}
+
+/* Лого */
+
+.main-header-logo {
+  border-bottom: none;
 }
 
 /* ОБЩИЕ СТИЛИ ДЛЯ ТЕКСТОВЫХ ПОЛЕЙ*/
@@ -107,6 +110,25 @@ a {
   background-color: #ededed;
 }
 
+.drop-catalog-list a,
+.user-login-button a {
+  border-bottom: none;
+}
+
+/* БЛОК С ТЕЛЕФОНОМ */
+
+.header-contacts p {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.header-contacts strong {
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
 /* СЛАЙДЕР */
 
 .slider-container ul {
@@ -133,11 +155,15 @@ a {
 
 .slide-switches a {
   color: #ffffff;
+  cursor: pointer;
 }
 
 /* СПЕЦ. ПРЕДЛОЖЕНИЯ */
 
 .offer-container-left {
+  width: 560px;
+  height: 229px;
+
   background-color: #6d1527;
   background-image: url("../img/rasp-back.jpg");
   background-position: 0 0;
@@ -147,6 +173,9 @@ a {
 }
 
 .offer-container-right {
+  width: 560px;
+  height: 229px;
+
   background-color: #3e251a;
   background-image: url("../img/choc-back.jpg");
   background-position: 0 0;
@@ -211,6 +240,9 @@ a {
 /* ФИЧИ */
 
 .features-container {
+  width: 1146px;
+  height: 306px;
+
   background-color: #eadec5;
   background-image: url("../img/wafer-back.png");
   background-position: 0 0;
@@ -238,6 +270,9 @@ a {
 /* НОВОЕ В НАШЕМ БЛОГЕ */
 
 .blog-container {
+  width: 550px;
+  height: 220px;
+
   background-color: #ffffff;
   background-image: url("../img/straw-back.jpg");
   background-position: bottom center;
@@ -259,13 +294,24 @@ a {
   text-decoration: underline;
 }
 
-/* БЛОК ПОДПИСКИ - тут либо 2 блока один в другом, либо один и у него цветная рамка */
+/* БЛОК ПОДПИСКИ - тут либо 2 блока один в другом, либо один и у него рамка-изображение, либо SVG нарисовать */
 
 .subscribe-container {
+  width: 550px;
+  height: 220px;
+
   background-color: #f7f6f3;
-  /*background-image: url("../img/linear-back.png");*/
-  /*background-position: 0 0;
-  background-repeat: repeat;*/
+  background-image: url("../img/linear-back.png");
+  background-position: 0 0;
+  background-repeat: repeat;
+
+  border-radius: 15px;
+}
+
+.subscribe-content {
+  width: 548px;
+  height: 210px;
+  background-color: #f8f7f4;
 
   border-radius: 15px;
 }
@@ -283,6 +329,8 @@ a {
 /* КОНТАКТЫ */
 
 .contacts-container {
+  width: 302px;
+  height: 305px;
   background-color: #fefefe;
 
   border-radius: 15px;
@@ -311,7 +359,162 @@ a {
   background-color: #f3866d; /*временно*/
 }
 
-/* ФУТЕР */
+/* ВНУТРЕННЯЯ СТРАНИЦА */
+
+.site-navigation-current {
+  background-color: #d07058;
+}
+
+.cart-button > a {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #323232;
+
+  background-color: #f7f6f3;
+}
+
+/* ХЛЕБНЫЕ КРОШКИ */
+
+.breadcrumbs ul {
+  list-style: none;
+}
+
+.bc-item a {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.bc-current a {
+  border-bottom: none;
+}
+
+/* Фильтр */
+
+.page-title {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+}
+
+.filter-container fieldset {
+  border: none;
+}
+
+.filter-container {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.back-layer ul {
+  list-style: none;
+}
+
+.filter-heading {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.back-layer {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+.sort-container .back-layer {
+  width: 193px;
+  height: 36px;
+}
+
+.cost-container .back-layer {
+  width: 218px;
+  height: 36px;
+}
+
+.fat-container .back-layer {
+  width: 414px;
+  height: 36px;
+}
+
+.filler-container .back-layer {
+  width: 702px;
+  height: 36px;
+}
+
+.back-layer select {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0);
+  color: #ffffff;
+}
+
+
+/* Кнопка Применить фильтр */
+
+.filter-button {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  color: #323232;
+  background-color: rgba(251, 252, 251, 1.0);
+}
+
+/*
+.filter-button:active {
+
+}
+*/
+
+/* Каталог */
+
+.catalog-content ul {
+  list-style: none;
+}
+
+.catalog-item {
+  text-align: center;
+}
+
+/* Пагинатор */
+
+.pagination ul {
+  list-style: none;
+}
+
+.pagination-list a {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #ffffff;
+
+  border-bottom: none;
+}
+
+.pag-current > a {
+  color: #323232;
+  background-color: #ffffff;
+}
+
+.pagination-prev > a {
+  opacity: 0.2;
+}
+
+.pag-item a:hover,
+.pag-item a:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Футер */
 
 .main-footer {
   font-size: 13px;
@@ -321,6 +524,10 @@ a {
 
 .main-footer a {
   color: #fefefe;
+}
+
+.social-button-list a {
+  border-bottom: none;
 }
 
 .footer-social ul {
@@ -335,6 +542,10 @@ a {
   font-weight: 700;
 }
 
+.HTMLacademy-logo {
+  border-bottom: none;
+}
+
 .footer-copyright p {
   font-size: 12px;
   font-weight: 400;
@@ -345,9 +556,9 @@ a {
 .search-overlay {
   background-color: #f8f7f4;
   border-radius: 6px;
-  width: 250px; /*для удобства*/
-  height: 50px; /*для удобства*/
-  padding: 30px; /*для удобства*/
+  width: 340px; 
+  height: 84px;
+  padding: 10px; /*временно*/
 }
 
 /* ОКНО ВХОДА */
@@ -355,6 +566,9 @@ a {
 .login-overlay {
   background-color: #f8f7f4;
   border-radius: 6px;
+  width: 277px; 
+  height: 214px;
+  padding: 10px; /*временно*/
 }
 
 .login-hints {
@@ -373,6 +587,9 @@ a {
 .feedback-container {
   background-color: #f8f7f4;
   border-radius: 6px;
+  width: 477px; 
+  height: 442px;
+  padding: 10px; /*временно*/
 }
 
 .feedback-content h2 {
@@ -386,6 +603,48 @@ a {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
+}
+
+/* КОРЗИНА */
+
+.cart-container {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+
+  background-color: #f8f7f4;
+  border-radius: 6px;
+  width: 540px; 
+  height: 242px;
+  padding: 10px; /*временно*/
+}
+
+.cart-content span {
+  color: #999999;
+}
+
+.cart-footer {
+  text-align: right;
+}
+
+.cart-sum {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.cart-footer a {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+
+  background-color: #f06441;
+}
+
+.cart-footer a:hover,
+.cart-footer a:focus {
+  color: #ffffff;
 }
 
 /* Для сокрытия чего не надо */
