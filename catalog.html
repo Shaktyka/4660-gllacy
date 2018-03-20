@@ -9,15 +9,18 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="inner-page">
   <!-- Хедер: лого, навигация, интерфейс, контакты -->
   <header class="main-header">
     <nav class="main-navigation">
+      <div class="container">
+
       <div class="main-logo">
         <a class="main-header-logo" href="index.html">
-		  <img src="img/main-logo.svg" width="154" height="64" alt="Gllacy Shop">
-		</a>
+		      <img src="img/main-logo.svg" width="154" height="64" alt="Gllacy Shop">
+		    </a>
       </div>
+
       <ul class="site-navigation">
         <li>
           <a class="site-navigation-current">Каталог</a>
@@ -46,11 +49,11 @@
           <a href="#">О Компании</a>
         </li>
       </ul>
-    </nav>
-    <div class="main-user-buttons">
+
       <ul class="user-navigation">
+
         <li class="user-search-button">
-          <a class="user-btn search-link" href="#" aria-label="Поиск по сайту"></a>
+          <a class="user-btn search-link" href="#" aria-label="Поиск по сайту">Поиск</a>
           <div class="search-overlay">
             <form action="https://htmlacademy.ru/echo" method="get">
               <p class="text-field">
@@ -62,6 +65,7 @@
             </form>
           </div>
         </li>
+
         <li class="user-login-button">
           <a class="user-btn login-link" href="#">
 			      Вход
@@ -143,32 +147,42 @@
         </li>
       </ul>
     </div>
-    <div class="header-contacts">
-      <p>
-        с 10 до 20 ежедневно <strong>8 818 450-25-25</strong>
-      </p>
-    </div>
-  </header>
+    </nav>
 
-  <!-- Основное содержание: хлебные крошки, список айтемов, пагинация -->
-  <main class="container">
+    <div class="container phone-breadcrumbs-wrapper">
+
     <div class="breadcrumbs">
       <ul class="breadcrumbs-list">
         <li class="bc-item">
           <a href="index.html">
-	          Главная
-		      </a>
+            Главная
+          </a>
         </li>
         <li class="bc-item">
           <a href="catalog.html">
-			      Каталог
-		      </a>
+            Каталог
+          </a>
         </li>
         <li class="bc-item bc-current">
           <a>Сливочное</a>
         </li>
       </ul>
     </div>
+
+    <div class="phone-container">
+      <div class="header-contacts">
+      <p>
+        с 10 до 20 ежедневно <strong>8&nbsp;818 450-25-25</strong>
+      </p>
+      </div>
+    </div>
+    </div>
+
+  </header>
+
+  <!-- Основное содержание: хлебные крошки, список айтемов, пагинация -->
+  <main class="container">
+
     <h1 class="page-title">Сливочное мороженое</h1>
     
     <section class="filter-catalog">
@@ -176,7 +190,7 @@
         <h2 class="visually-hidden">Фильтр продукции</h2>
 
         <form name="filter-form" action="https://htmlacademy.ru/echo" method="get">
-
+          
           <div class="sort-container">
             <label for="sorting">
               Сортировка:
@@ -529,6 +543,8 @@
   
   <!-- Футер: соц. кнопки, инфо, копирайт -->
   <footer class="main-footer">
+    <div class="container">
+
     <div class="footer-social">
       <ul class="social-button-list">
         <li>
@@ -545,6 +561,7 @@
         </li>
       </ul>
     </div>
+
     <div class="footer-info">
       <ul class="info-list">
         <li class="info-item">
@@ -567,6 +584,7 @@
 		<img src="img/logo-htmlacademy.svg" width="108" height="39" alt="HTMLacademy">
 	  </a>
       <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2017</p>
+    </div>
     </div>
   </footer>
 </body>
