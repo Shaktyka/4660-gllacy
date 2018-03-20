@@ -1,7 +1,7 @@
 ﻿/* ОСНОВНОЕ */
 
 body {
-  width: 1200px;
+  min-width: 1200px;
   margin: 0 auto;
   padding: 0;
 
@@ -220,15 +220,26 @@ img {
   outline: 1px dashed #ffffff; /* временно */
 } 
 
-.slider-container ul {
+.slider-list {
   list-style: none;
 }
 
 .slide-item {
+  display: none;
   font-size: 60px;
   line-height: 60px;
   font-weight: 700;
   text-align: center;
+}
+
+.slide-item:nth-child(1) {
+  display: block;
+}
+
+.slider-list p {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 20px;
 }
 
 .slide-item a {
@@ -238,7 +249,7 @@ img {
   color: #ffffff;
 }
 
-.slide-switches {
+.slider-controls ul {
   list-style: none;
 } 
 
@@ -264,7 +275,6 @@ img {
 
 .offer-container-left {
   width: 560px;
-  height: 229px;
 
   background-color: #6d1527;
   background-image: url("../img/rasp-back.jpg");
@@ -276,7 +286,6 @@ img {
 
 .offer-container-right {
   width: 560px;
-  height: 229px;
 
   background-color: #3e251a;
   background-image: url("../img/choc-back.jpg");
@@ -344,6 +353,12 @@ img {
   text-align: center;
 }
 
+.catalog-item-image {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
 .card-content-container a {
   font-size: 16px;
   line-height: 22px;
@@ -351,7 +366,27 @@ img {
   font-weight: 500;
 }
 
+.card-content-container {
+  position: relative;
+}
 
+.card-content-container:before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/hit.png");
+  background-repeat: no-repeat;
+  left: 0;
+  top: 0;
+  width: 61px;
+  height: 61px;
+}
+
+.catalog-item-price {
+  position: absolute;
+  top: 210px;
+  margin: 0;
+  padding: 0;
+}
 
 /* ФИЧИ */
 
@@ -441,7 +476,7 @@ img {
 .subscribe-container {
   box-sizing: border-box;
   width: 550px;
-  height: 220px;
+  /*height: 220px;*/
 
   background-color: #f7f6f3;
   background-image: url("../img/linear-back.png");
@@ -453,7 +488,7 @@ img {
 
 .subscribe-content {
   width: 548px;
-  height: 210px;
+  /*height: 210px;*/
   background-color: #f8f7f4;
 
   border-radius: 15px;
@@ -477,7 +512,7 @@ img {
 
 .contacts-container {
   width: 302px;
-  height: 305px;
+  /*height: 305px;*/
   background-color: #fefefe;
 
   border-radius: 15px;
@@ -664,6 +699,7 @@ img {
 }
 
 .catalog-item {
+  position: relative;
   width: 267px;
   margin-bottom: 40px;
   margin-right: 26px;
@@ -812,6 +848,7 @@ img {
 
 .footer-copyright a {
   border-bottom: none;
+  margin-bottom: 12px;
 }
 
 .copiright-text a {
@@ -821,6 +858,8 @@ img {
 }
 
 .footer-copyright p {
+  margin: 0;
+  padding: 0;
   font-size: 12px;
   font-weight: 400;
 }
@@ -841,7 +880,7 @@ img {
   background-color: #f8f7f4;
   border-radius: 6px;
   width: 277px; 
-  height: 214px;
+  /*height: 214px;*/
   padding: 10px; /*временно*/
 }
 
@@ -864,7 +903,7 @@ img {
   background-color: #f8f7f4;
   border-radius: 6px;
   width: 477px; 
-  height: 442px;
+  /*height: 442px;*/
   padding: 10px; /*временно*/
 }
 
@@ -887,7 +926,7 @@ img {
   background-color: #f8f7f4;
   border-radius: 6px;
   width: 540px; 
-  height: 242px;
+  /*height: 242px;*/
   padding: 10px; /*временно*/
 }
 
