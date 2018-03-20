@@ -212,8 +212,9 @@ img {
 /* СЛАЙДЕР */
 
 .main-slider {
-  outline: 1px dashed #ffffff; /* временно */
+  position: relative;
   margin-bottom: 40px;
+  outline: 1px dashed #ffffff; /* временно */
 } 
 
 .main-slider .container {
@@ -222,6 +223,8 @@ img {
 
 .slider-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .slide-item {
@@ -243,22 +246,47 @@ img {
 }
 
 .slide-item a {
+  display: block;
+  width: 280px;
+  padding: 10px;
+  margin: 0 auto;
+
   font-size: 32px;
   line-height: 44px;
   font-weight: bold;
   color: #ffffff;
+
+  background-color: pink; /* временно */
+  border-radius: 30px; 
+  border: none;
 }
+
 
 .slider-controls ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 } 
 
+/*.switch {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  margin-right: 9px;
+  text-indent: -1000px;
+  background-image: url("../img/radio-off.svg");
+}
+
 .slide-switches a {
+  display: block;
+  width: 30;
+  height: 30;
   color: #ffffff;
+  font-size: 8px;
   cursor: pointer;
   border-bottom: none;
 }
-
+*/
 
 
 /* Спец. предложения */
@@ -370,7 +398,7 @@ img {
   position: relative;
 }
 
-.card-content-container:before {
+.card-content-container::before {
   content: "";
   position: absolute;
   background-image: url("../img/hit.png");
@@ -507,6 +535,25 @@ img {
   margin: 0 auto;
 }
 
+.map-container {
+  position: relative;
+}
+
+.map-container::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 140px;
+  background-image: url("../img/pin.svg");
+  top: 140px;
+  left: 266px;
+}
+
+.contacts-container {
+  position: absolute;
+  bottom: 200px;
+  right: 90px;
+}
 
 /* Контакты */
 
