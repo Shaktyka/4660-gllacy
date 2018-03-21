@@ -1,7 +1,7 @@
 ﻿/* ОСНОВНОЕ */
 
 body {
-  min-width: 1200px;
+  width: 1200px;
   margin: 0 auto;
   padding: 0;
 
@@ -11,8 +11,26 @@ body {
   font-weight: 500;
   color: #ffffff;
 
+  background-color: lightgray; /* временно */
+}
+
+.site-wrapper {
+  min-width: 1200px;
   background-color: #849d8f;
-  outline: 1px dashed pink; /* временно */
+  /*outline: 1px solid black; /* временно */
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 27px;
+  outline: 1px solid red; /* временно */
+}
+
+.main-header {
+  margin: 0; 
+  padding: 0;
+  background-color: green; /* временно */
 }
 
 /* Ссылки, кнопки */
@@ -41,10 +59,11 @@ a {
   font-weight: 500;
   color: #ffffff;
   text-decoration: none;
+  vertical-align: middle;
 }
 
 img {
-  max-height: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -55,7 +74,7 @@ img {
 }
 
 .main-logo {
-  width: 156px;
+  width: 154px;
   height: 64px;
   margin: 0; 
   padding-top: 9px;
@@ -98,46 +117,49 @@ img {
 }
 
 
-/* ГЛАВНАЯ НАВИГАЦИЯ - разные параметры для меню сайта и меню пользователя */
+/* ГЛАВНАЯ НАВИГАЦИЯ */
 
-.main-header {
-  margin: 0; 
-  padding: 0;
-}
-
-.container {
-  width: 1146px;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.main-navigation .container {
+.main-navigation {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   border: 1px dotted red;
 }
 
-.site-navigation li,
-.user-navigation li {
-  display: inline-block; /* временно */
+.site-navigation a,
+.user-navigation a {
+  display: block; 
+  vertical-align: middle;
+}
+
+.site-navigation a {
+  margin-right: 28px;
 }
 
 .site-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
   width: 540px;
   margin: 0;
   padding: 0;
   padding-top: 29px;
+
   outline: 1px dashed yellow; /* временно */
 }
 
 .user-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
   width: 420px;
   padding: 0;
   padding-top: 23px;
   margin: 0;
   margin-left: auto;
-  text-align: right;
+
   outline: 1px dashed orange; /* временно */
 }
 
@@ -217,7 +239,7 @@ img {
   outline: 1px dashed #ffffff; /* временно */
 } 
 
-.main-slider .container {
+.main-slider {
   outline: 1px dashed #ffffff; /* временно */
 } 
 
@@ -291,17 +313,26 @@ img {
 
 /* Спец. предложения */
 
-.main-spec-offers .container {
-  display: flex;
-  justify-content: space-between;
+.main-spec-offers {
+  box-sizing: border-box;
+  margin-bottom: 40px;
   outline: 1px dashed #ffffff; /* временно */
 }
 
-.main-spec-offers {
-  margin-bottom: 40px;
+.spec-offers-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  outline: 1px dashed #ffffff; /* временно */
 }
 
-.offer-container-left {
+.spec-offer:nth-child(1) {
   width: 560px;
 
   background-color: #6d1527;
@@ -312,7 +343,7 @@ img {
   border-radius: 10px;
 }
 
-.offer-container-right {
+.spec-offer:nth-child(2) {
   width: 560px;
 
   background-color: #3e251a;
@@ -323,14 +354,14 @@ img {
   border-radius: 10px;
 }
 
-.main-spec-offers .spec-offer {
-  padding: 19px 21px 22px 21px;
+.spec-offer {
+  padding: 20px;
 }
 
 .spec-offer h3 {
   font-size: 35px;
   line-height: 41px;
-  font-weight: bold;
+  font-weight: 700;
   margin: 0; 
   padding: 0;
 }
@@ -338,14 +369,14 @@ img {
 .spec-offer p {
   font-size: 18px;
   line-height: 22px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 
 
 /* Хиты */
 
-.popular-and-price .container {
+.popular-and-price {
   outline: 1px solid orange; /* временно */
 }
 
@@ -361,6 +392,7 @@ img {
   flex-wrap: wrap;
   align-items: stretch;
   margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -398,7 +430,7 @@ img {
   position: relative;
 }
 
-.card-content-container::before {
+.hit-pic::before {
   content: "";
   position: absolute;
   background-image: url("../img/hit.png");
@@ -453,15 +485,62 @@ img {
 }
 
 .features-item {
+  position: relative;
   font-weight: 400;
   color: #323232;
 }
 
+.features-item:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/ice-cream.svg");
+  background-repeat: no-repeat;
+  top: px;
+  left: px;
+  width: 49px;
+  height: 49px;
+  z-index: 10;
+}
 
+.features-item:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/eco.svg");
+  background-repeat: no-repeat;
+  top: px;
+  left: px;
+  width: 49px;
+  height: 49px;
+  z-index: 10;
+}
+
+.features-item:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/cow.svg");
+  background-repeat: no-repeat;
+  top: px;
+  left: px;
+  width: 49px;
+  height: 49px;
+  z-index: 10;
+}
+
+.features-item:nth-child(4)::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/thermometer.svg");
+  background-repeat: no-repeat;
+  top: px;
+  left: px;
+  width: 49px;
+  height: 49px;
+  z-index: 10;
+}
 
 /* Блог и подписка */
 
-.blog-subscribe-container .container {
+.blog-subscribe-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -549,18 +628,20 @@ img {
   left: 266px;
 }
 
-.contacts-container {
-  position: absolute;
-  bottom: 200px;
-  right: 90px;
-}
+
 
 /* Контакты */
 
-.contacts-container {
+.main-contacts {
+  position: absolute;
+  bottom: 200px;
+  right: 90px;
+
+  box-sizing: border-box;
   width: 302px;
   /*height: 305px;*/
   background-color: #fefefe;
+  padding: 30px 25px;
 
   border-radius: 15px;
 }
@@ -570,6 +651,10 @@ img {
   line-height: 20px;
   font-weight: 400;
   color: #323232;
+}
+
+.contacts-content p {
+  margin: 0;
 }
 
 .contacts-content strong {
@@ -604,7 +689,7 @@ img {
   margin: 0;
 }
 
-.container.phone-breadcrumbs-wrapper {
+.phone-breadcrumbs-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -826,15 +911,27 @@ img {
 
 
 
-/* Футер */
+/* ФУТЕР */
 
-.main-footer .container {
+.main-footer {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   padding-top: 18px;
   outline: 1px dashed #ffffff; /* временно */
 }
+
+.main-footer {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.main-footer a {
+  color: #fefefe;
+}
+
+/* Социальные кнопки */
 
 .footer-social {
   width: 267px;
@@ -849,34 +946,6 @@ img {
   padding: 0;
 }
 
-.footer-info {
-  width: 367px; /* исходно 327 */
-  padding-top: 20px;
-  outline: 1px dashed yellow; /* временно */
-}
-
-.footer-info ul {
-  margin: 0; 
-  padding: 0;
-}
-
-.footer-copyright {
-  width: 188;
-  margin: 0;
-  margin-left: auto;
-  outline: 1px dashed yellow; /* временно */
-}
-
-.main-footer {
-  font-size: 13px;
-  line-height: 18px;
-  font-weight: 400;
-}
-
-.main-footer a {
-  color: #fefefe;
-}
-
 .social-button-list a {
   border-bottom: none;
 }
@@ -885,12 +954,62 @@ img {
   list-style: none;
 }
 
-.footer-info ul {
-  list-style: none;
+
+/* Статьи */
+
+.footer-info {
+  width: 367px; /* исходно 327 */
+  padding: 20px;
+  outline: 1px dashed yellow; /* временно */
 }
 
-.info-item:first-child {
+.footer-info ul {
+  list-style: none;
+  width: 330px;
+  margin: 0; 
+  padding: 0;
+  padding-left: 20px;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.info-item {
+  width: 163px;
+}
+
+.info-item:nth-child(1) {
+  position: relative;
   font-weight: 700;
+}
+
+/*.info-item:nth-child(1), 
+.info-item:nth-child(3) {
+  padding-left: 30px;
+}*/
+
+.info-item:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/heart.svg");
+  width: 15px;
+  height: 13px;
+  top: 5px;
+  left: -22px;
+  z-index: 10;
+}
+
+/* Копирайт */
+
+.footer-copyright {
+  width: 188;
+  margin: 0;
+  margin-left: auto;
+  outline: 1px dashed yellow; /* временно */
 }
 
 .footer-copyright a {
@@ -1002,15 +1121,22 @@ img {
 
 
 
-/* Для сокрытия чего не надо */
+/* Для скрытия */
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
+
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
