@@ -10,22 +10,14 @@ body {
   line-height: 22px;
   font-weight: 500;
   color: #ffffff;
-
-  background-color: lightgray; /* временно */
+  background-color: #849d8f;
 }
 
 .site-wrapper {
   min-width: 1200px;
-  background-color: #849d8f;
-  outline: 1px solid black; /* временно */
-}
-
-.container {
-  width: 1200px;
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0 27px;
-  outline: 1px solid red; /* временно */
 }
 
 img {
@@ -74,7 +66,6 @@ a {
   margin: 0; 
   padding-top: 9px;
   margin-right: 24px;
-  outline: 1px dashed lightgreen; /* временно */
 }
 
 /* ОБЩИЕ СТИЛИ ДЛЯ ТЕКСТОВЫХ ПОЛЕЙ*/
@@ -118,7 +109,6 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  border: 1px dotted red;
 }
 
 .site-navigation {
@@ -130,8 +120,6 @@ a {
   margin: 0;
   padding: 0;
   padding-top: 29px;
-
-  outline: 1px dashed yellow; /* временно */
 }
 
 .user-navigation {
@@ -144,8 +132,6 @@ a {
   padding-top: 23px;
   margin: 0;
   margin-left: auto;
-
-  outline: 1px dashed orange; /* временно */
 }
 
 .site-navigation,
@@ -162,6 +148,7 @@ a {
 
 .site-navigation a {
   margin-right: 28px;
+
   line-height: 18px;
   font-weight: 700;
   color: #ffffff;
@@ -182,12 +169,6 @@ a {
   background-color: #f7f6f3; 
 }
 
-.user-navigation a:hover,
-.user-navigation a:focus {
-  color: #323232;
-  background-color: #f8f7f4;
-}
-
 .site-navigation a:active {
   color: #333333;
   background-color: #ededed;
@@ -198,22 +179,129 @@ a {
   border-bottom: none;
 }
 
+.site-navigation-current {
+  background-color: #d07058;
+}
+
+/* Кнопки user-navigation */
+
+.cart-button a {
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  width: 117px;
+  height: 34px;
+
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #ffffff;
+
+  padding-top: 8px;
+  padding-right: 35px;
+  padding-bottom: 10px;
+  padding-left: 45px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 30px; 
+  border: none;
+}
+
+.cart-button a:hover path,
+.cart-button a:focus path{
+  fill: #000000;
+}
+
+/*.cart-button a::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/basket.svg");
+  background-repeat: no-repeat;
+  width: 21px;
+  height: 20px;
+  left: 17px;
+  top: 5px;
+}*/
+
+.user-login-button .login-link {
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  width: 94px;
+  height: 34px;
+
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #ffffff;
+
+  padding-top: 8px;
+  padding-right: 18px;
+  padding-bottom: 10px;
+  padding-left: 45px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 30px; 
+  border: none;
+}
+
+/*.user-login-button .login-link::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/entrance-white.svg");
+  background-repeat: no-repeat;
+  width: 21px;
+  height: 19px;
+  left: 17px;
+  top: 7px;
+}*/
+
+.user-login-button .login-link:hover path,
+.user-login-button .login-link:focus path{
+  fill: #000000;
+}
+
+.user-search-button .search-link {
+  display: block;
+  box-sizing: border-box;
+  width: 34px;
+  height: 34px;
+
+  padding-top: 8px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%; 
+  border: none;
+}
+
+.user-navigation a:hover,
+.user-navigation a:focus {
+  color: #323232;
+  background-color: #f8f7f4;
+}
+
+.user-search-button .search-link:hover path,
+.user-search-button .search-link:focus path {
+  fill: #000000;
+}
 
 /* БЛОК С ТЕЛЕФОНОМ */
 
 .phone-container {
   display: flex;
   justify-content: flex-end;
-  outline: 1px dashed #ffffff; /* временно */
 }
 
 .header-contacts {
   width: 167px;
   margin: 0; 
   padding: 0;
+  text-align: right;
 }
 
 .header-contacts p {
+  margin: 0;
+  padding: 0;
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
@@ -231,7 +319,7 @@ a {
 .slider {
   position: relative;
   margin-bottom: 40px;
-  outline: 1px dashed #ffffff; /* временно */
+  /*outline: 1px dashed #ffffff;*/ 
 } 
 
 .slider-list {
@@ -274,7 +362,6 @@ a {
   border: none;
 }
 
-
 .slider-controls ul {
   list-style: none;
   margin: 0;
@@ -306,7 +393,6 @@ a {
 
 .main-spec-offers {
   margin-bottom: 40px;
-  outline: 1px dashed #ffffff; /* временно */
 }
 
 .spec-offers-list {
@@ -319,7 +405,6 @@ a {
   padding: 0;
 
   list-style: none;
-  outline: 1px dashed #ffffff; /* временно */
 }
 
 .spec-offer:nth-child(1) {
@@ -369,7 +454,7 @@ a {
 /* Хиты */
 
 .popular-and-price {
-  outline: 1px solid orange; /* временно */
+  /*outline: 1px solid orange;*/ 
 }
 
 .popular-and-price {
@@ -664,15 +749,6 @@ a {
 
 /* Внутренняя страница */
 
-.site-navigation-current {
-  background-color: #d07058;
-}
-
-.cart-button .user-btn {
-  color: #323232;
-  background-color: #f7f6f3;
-}
-
 
 /* Хлебные крошки */
 
@@ -685,11 +761,11 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  outline: 1px dashed red; /* временно */
+  /*outline: 1px dashed red;*/ /* временно */
 }
 
 .breadcrumbs {
-  outline: 1px dashed yellow; /* временно */
+  /*outline: 1px dashed yellow;*/ /* временно */
 }
 
 .breadcrumbs ul {
@@ -723,7 +799,7 @@ a {
 
 .filter-catalog {
   margin-bottom: 40px;
-  outline: 1px dashed yellow; /* временно */
+  /*outline: 1px dashed yellow;*/ /* временно */
 }
 
 .filter-container fieldset {
@@ -828,7 +904,7 @@ a {
   margin-bottom: 40px;
   margin-right: 26px;
   text-align: center;
-  outline: 1px dashed yellow; /* временно */
+  /*outline: 1px dashed yellow;*/ /* временно */
 }
 
 .catalog-item:nth-child(4n) {
@@ -866,7 +942,7 @@ a {
 .pagination {
   text-align: right;
   margin-bottom: 30px;
-  outline: 1px dashed #ffffff; /* временно */
+  /*outline: 1px dashed #ffffff;*/ /* временно */
 }
 
 .pagination-list {
@@ -910,7 +986,7 @@ a {
   flex-direction: row;
   justify-content: flex-start;
   padding-top: 18px;
-  outline: 1px dashed #ffffff; /* временно */
+  /*outline: 1px dashed #ffffff;*/ /* временно */
 }
 
 .main-footer {
@@ -930,7 +1006,7 @@ a {
   margin: 0;
   margin-right: 134px;
   padding-top: 19px;
-  outline: 1px dashed yellow; /* временно */
+  /*outline: 1px dashed yellow;*/ /* временно */
 }
 
 .footer-social ul {
@@ -952,7 +1028,7 @@ a {
 .footer-info {
   width: 367px; /* исходно 327 */
   padding: 20px;
-  outline: 1px dashed yellow; /* временно */
+  /*outline: 1px dashed yellow;*/ /* временно */
 }
 
 .footer-info ul {
@@ -1001,7 +1077,7 @@ a {
   width: 188;
   margin: 0;
   margin-left: auto;
-  outline: 1px dashed yellow; /* временно */
+  /*outline: 1px dashed yellow;*/ /* временно */
 }
 
 .footer-copyright a {
