@@ -28,10 +28,6 @@ body {
   outline: 1px solid red; /* временно */
 }
 
-.main-header {
-  background-color: green; /* временно */
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -309,7 +305,6 @@ a {
 /* Спец. предложения */
 
 .main-spec-offers {
-  box-sizing: border-box;
   margin-bottom: 40px;
   outline: 1px dashed #ffffff; /* временно */
 }
@@ -328,6 +323,7 @@ a {
 }
 
 .spec-offer:nth-child(1) {
+  box-sizing: border-box;
   width: 560px;
 
   background-color: #6d1527;
@@ -339,6 +335,7 @@ a {
 }
 
 .spec-offer:nth-child(2) {
+  box-sizing: border-box;
   width: 560px;
 
   background-color: #3e251a;
