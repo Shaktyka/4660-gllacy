@@ -970,16 +970,18 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-start;
+
   margin-bottom: 40px;
 }
 
-.blog-container {
+.blog-news {
   box-sizing: border-box;
   width: 560px;
 
   background-color: #ffffff;
   background-image: url("../img/straw-back.jpg");
-  background-position: bottom center;
+  background-position: 10% 40%;
   background-repeat: no-repeat;
 
   border-radius: 15px;
@@ -999,6 +1001,8 @@ img {
 }
 
 .blog-content a {
+  background-color: rgba(255, 255, 255, 0.8);
+
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
@@ -1072,25 +1076,27 @@ img {
 .map {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
-.map-container {
+.map {
   position: relative;
   background-color: #f7f1d9;
+  /*outline: 1px dashed red;*/ /* Временно */
 }
 
-.map-container p {
+.map p {
   margin: 0;
   padding: 0;
 }
 
-.map-container img {
+.map img {
   margin: 0;
   padding: 0;
+  /*outline: 1px dashed green;*/ /* Временно */
 }
 
-.map-container::before {
+.map::before {
   content: "";
   position: absolute;
   width: 80px;
@@ -1659,6 +1665,8 @@ img {
   height: 267px;
   margin: 0;
   padding: 0;
+
+  border-radius: 50%;
 }
 
 .catalog-item-price .ruble {
