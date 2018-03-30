@@ -60,7 +60,7 @@
                   <label class="visually-hidden" for="search-field">
                     Поиск по сайту
                   </label>
-                  <input class="text-input" type="search" name="search-field" id="search-field" maxlength="250" placeholder="Что ищем?">
+                  <input type="search" name="search-field" id="search-field" maxlength="250" placeholder="Что ищем?">
                 </p>
               </form>
             </div>
@@ -73,31 +73,37 @@
                   <path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z" />
                 </g>
               </svg>Вход</a>
+
             <div class="login-overlay">
+
               <form class="login-form" name="login-form" action="https://htmlacademy.ru/echo" method="post">
+
                 <p class="text-field">
                   <label class="visually-hidden" for="email-field">E-mail</label>
                   <input type="email" name="email-field" id="email-field" placeholder="Электронная почта" required>
                 </p>
+
                 <p class="text-field">
                   <label class="visually-hidden" for="password-field">Пароль</label>
                   <input type="password" name="password-field" id="password-field" placeholder="Пароль" required>
                 </p>
+
                 <div class="login-hints-wrapper">
+                  <p>
                   <button class="act-button" type="submit" name="login-button">
                     Войти
                   </button>
-                  <ul class="login-hints">
-                    <li>
+                  </p>
+                  <p class="login-hints">
                       <a href="#" target="_blank">Забыли пароль?</a>
-                    </li>
-                    <li>
                       <a href="#" target="_blank">Новая регистрация</a>
-                    </li>
-                  </ul>
+                  </p>
                 </div>
+
               </form>
+
             </div>
+
           </li>
           <li class="cart-button">
             <a class="user-btn cart-empty" href="#">
@@ -184,6 +190,7 @@
       <section class="popular-and-price">
         <h2 class="visually-hidden">Хиты продаж</h2>
         <ul class="popular-items-list">
+
           <li class="popular-item">
             <div class="card-content-container hit-pic">
               <p class="catalog-item-image">
@@ -195,13 +202,16 @@
                 <span class="weight">/кг</span>
               </p>
               <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-              <div class="card-overlay">
-                <p>
-                  <a class="act-button" href="#">Быстрый просмотр</a>
-                </p>
-              </div>
             </div>
+
+            <div class="card-overlay">
+              <p>
+                <a class="act-button" href="#">Быстрый просмотр</a>
+              </p>
+            </div>
+            
           </li>
+
           <li class="popular-item">
             <div class="card-content-container hit-pic">
               <p class="catalog-item-image">
@@ -213,12 +223,12 @@
                 <span class="weight">/кг</span>
               </p>
               <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+            </div>
               <div class="card-overlay">
                 <p>
                   <a class="act-button" href="#">Быстрый просмотр</a>
                 </p>
               </div>
-            </div>
           </li>
           <li class="popular-item">
             <div class="card-content-container hit-pic">
@@ -231,12 +241,12 @@
                 <span class="weight">/кг</span>
               </p>
               <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+            </div>
               <div class="card-overlay">
                 <p>
                   <a class="act-button" href="#">Быстрый просмотр</a>
                 </p>
               </div>
-            </div>
           </li>
           <li class="popular-item">
             <div class="card-content-container hit-pic">
@@ -249,12 +259,12 @@
                 <span class="weight">/кг</span>
               </p>
               <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+            </div>
               <div class="card-overlay">
                 <p>
                   <a class="act-button" href="#">Быстрый просмотр</a>
                 </p>
               </div>
-            </div>
           </li>
         </ul>
       </section>
