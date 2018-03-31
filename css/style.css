@@ -10,7 +10,17 @@ body {
   line-height: 22px;
   font-weight: 500;
   color: #ffffff;
+
   background-color: #849d8f;
+}
+
+.site-container {
+  min-width: 1200px;
+
+  background-color: #849d8f;
+  background-image: url("../img/double-ice-1.png");
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
 .site-wrapper {
@@ -469,7 +479,7 @@ img {
 }
 
 .cart-button .cart-container {
-  display: none;
+  display: block;
 }
 
 .cart-button:hover .cart-container {
@@ -575,40 +585,43 @@ img {
 
 .slider {
   position: relative;
-  margin-bottom: 40px;
+  padding-top: 274px;
+  margin-bottom: 41px;
+
   text-align: center;
-  margin-top: -118px;
-  z-index: 0;
-  height: 605px;
+  color: #ffffff;
 
   /*outline: 1px dashed #ffffff;*/ /* временно */
 } 
 
 .slider-list {
-  list-style: none;
   margin: 0;
   padding: 0;
+
+  list-style: none;
 }
 
 .slider-item {
   display: none;
-  font-size: 60px;
-  line-height: 60px;
-  font-weight: 700;
 }
 
 .slider-item:nth-child(1) {
   display: block;
 }
 
-.slider-list p {
+.banner-slogan {
   width: 700px;
   margin: 0 auto;
   padding: 0;
-  padding-bottom: 30px;
+  padding-bottom: 29px;
+
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
 }
 
-.slider-item a {
+.slide-button {
+  display: inline-block;
   padding: 10px 40px;
 
   font-size: 32px;
@@ -617,14 +630,12 @@ img {
   color: #ffffff;
   
   vertical-align: top;
+  text-decoration: none;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  border: none;
 }
 
-.slide-description {
-  z-index: 10;
-  margin-top: -499px;
-  /*outline: 1px dashed yellow;*/ /* временно */
-}
+
 
 /* Контролы слайдов */
 
@@ -651,7 +662,7 @@ img {
   position: absolute;
   bottom: 20px;
   left: 0;
-  z-index: 20;
+  z-index: 5;
   
   font-size: 0;
 }
@@ -660,9 +671,9 @@ img {
   background-color: #ffffff;
 }
 
-#product-1:checked ~ body #slide1,
-#product-2:checked ~ body #slide2,
-#product-3:checked ~ body #slide3 {
+#product-1:checked ~ .site-container #slide1,
+#product-2:checked ~ .site-container #slide2,
+#product-3:checked ~ .site-container #slide3 {
   display: block;
 }
 
@@ -684,11 +695,9 @@ img {
 }
 
 .spec-offer {
-  padding: 18px 20px 23px 20px;
+  padding: 18px 20px 23px 19px;
   background-position: 0 0;
   background-repeat: repeat;
-
-  z-index: 20;
 }
 
 .spec-offer-raspberry {
@@ -880,7 +889,7 @@ img {
   top: 210px;
   margin: 0;
   padding: 0;
-  padding-left: 2px;
+  padding-left: 0;
 
   z-index: 5;
 }
@@ -931,7 +940,7 @@ img {
   font-weight: 400;
   color: #323232;
 
-  padding-left: 56px;
+  padding-left: 57px;
   margin-bottom: 22px;
 }
 
@@ -1000,7 +1009,7 @@ img {
 
   background-color: #ffffff;
   background-image: url("../img/straw-back.jpg");
-  background-position: 10% 40%;
+  background-position: 10% 39%;
   background-repeat: no-repeat;
 
   border-radius: 15px;
@@ -1172,11 +1181,15 @@ img {
 }
 
 .contacts-adress {
-  margin-bottom: 16px;
+  margin-bottom: 19px;
 }
 
 .contacts-phone {
   margin-bottom: 25px;
+}
+
+.contacts-phone strong {
+  margin-bottom: 1px;
 }
 
 .contacts-phone .description {
@@ -1253,7 +1266,7 @@ img {
 
 .page-title {
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 25px;
   padding: 0;
 
   font-size: 35px;
@@ -1272,7 +1285,7 @@ img {
   line-height: 18px;
   font-weight: 500;
 
-  outline: 1px solid yellow; /* временно */
+  /*outline: 1px solid yellow;*/ /* временно */
 }
 
 .filter {
@@ -1284,7 +1297,7 @@ img {
   margin: 0;
   padding: 0;
 
-  outline: 2px dashed red; /* временно */
+  /*outline: 2px dashed red;*/ /* временно */
 }
 
 .filter-catalog fieldset {
@@ -1301,13 +1314,11 @@ img {
   margin: 0;
   margin-right: 15px;
   margin-bottom: 15px;
-  /*height: 36px;*/
-  outline: 1px dashed red; /* временно */
+  /*outline: 1px dashed red;*/ /* временно */
 }
 
 .sort-container .sort-controls {
-  margin: -2px;
-  padding-bottom: 7px;
+  padding-bottom: 5px;
   padding-left: 18px;
 }
 
@@ -1331,7 +1342,7 @@ img {
   font-weight: 400;
   color: #ffffff;
 
-  padding: 6px 15px 8px 10px;
+  padding: 9px 15px 8px 13px;
 
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 30px;
@@ -1366,7 +1377,7 @@ img {
   width: 218px;
   margin-right: 15px;
   margin-bottom: 15px;
-  outline: 1px dashed red; /* временно */
+  /*outline: 1px dashed red;*/ /* временно */
 }
 
 .range-controls {
@@ -1425,7 +1436,6 @@ img {
 
 .price-controls {
   margin-bottom: 5px;
-  margin-top: -3px;
   padding-left: 16px;
   /*outline: 2px dashed lightgreen;*/ /* временно */
 }
@@ -1460,7 +1470,7 @@ img {
   box-sizing: border-box;
   width: 414px;
   margin-right: 15px;
-  outline: 1px dashed red; /* временно */
+  /*outline: 1px dashed red;*/ /* временно */
 }
 
 .fat-container fieldset {
@@ -1469,9 +1479,10 @@ img {
 }
 
 .fat-container legend {
-  padding: 0;
+  display: block;
+
+  padding: 2px 0 0 0;
   margin: 0;
-  margin-top: 2px;
   margin-bottom: 5px;
   margin-left: 15px;
 
@@ -1511,16 +1522,16 @@ img {
 }
 
 .fat-container .filter-option {
-  margin-top: 11px;
-  padding-left: 30px;
-  padding-right: 10px;
+    margin-top: 11px;
+    padding-left: 33px;
+    padding-right: 15px;
 }
 
 .filter-radio + label::before {
   content: "";
 
   position: absolute;
-  left: -30px;
+  left: -32px;
   top: -3px;
 
   width: 16px;
@@ -1534,8 +1545,8 @@ img {
   content: "";
 
   position: absolute;
-  top: 5px;
-  left: -22px;
+  top: 4px;
+  left: -25px;
 
   width: 8px;
   height: 8px;
@@ -1565,7 +1576,7 @@ img {
   box-sizing: border-box;
   width: 702px;
   margin-right: 15px;
-  outline: 1px dashed red; /* временно */
+  /*outline: 1px dashed red;*/ /* временно */
 }
 
 .filler-container ul {
@@ -1595,10 +1606,10 @@ img {
 }
 
 .filler-container legend {
-  padding: 0;
+  display: block;
+  padding: 1px 0 0 0;
   margin: 0;
-  margin-top: 2px;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
   margin-left: 15px;
 
   font-size: 14px;
@@ -1609,8 +1620,8 @@ img {
 
 .filler-checkbox {
   position: relative;
-  padding-left: 30px;
-  padding-right: 18px;
+  padding-left: 34px;
+  padding-right: 19px;
   display: block;
 
   /*padding-left: 30px;
@@ -1670,8 +1681,11 @@ img {
 
 .filter-button {
   box-sizing: border-box;
-  padding: 10px 27px 8px 27px;
-  margin-top: 20px;
+ /* padding: 8px 27px 7px 27px;
+  margin-top: 20px;*/
+  
+  padding: 9px 27px 5px 27px;
+  margin-top: 23px;
 
   font-size: 16px;
   line-height: 18px;
@@ -1681,7 +1695,7 @@ img {
 
   border: 2px solid #ffffff;
   border-radius: 20px;
-  outline: 1px dashed red; /* временно */
+  /*outline: 1px dashed red;*/ /* временно */
 }
 
 .filter-button:hover,
@@ -1701,7 +1715,7 @@ img {
 /* Каталог */
 
 .catalog {
-  margin-bottom: 40px;
+  margin-bottom: 44px;
 }
 
 .catalog-list {
@@ -1717,7 +1731,7 @@ img {
 .catalog-item {
   position: relative;
   width: 267px;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
   margin-right: 26px;
   text-align: center;
   /*outline: 1px dashed yellow;*/ /* временно */
@@ -1779,7 +1793,7 @@ img {
   flex-direction: row;
   justify-content: flex-end;
 
-  margin-bottom: 30px;
+  margin-bottom: 29px;
   /*outline: 1px dashed #ffffff;*/ /* временно */
 }
 
@@ -1795,9 +1809,9 @@ img {
   list-style: none;
 } 
 
-.pag-item {
+/*.pag-item {
   margin-left: 5px;
-}
+}*/
 
 .pag-item:first-child {
   margin-left: 0;
@@ -1811,7 +1825,7 @@ img {
   font-weight: 500;
   color: #ffffff;
   
-  padding: 5px 10px;
+  padding: 4px 9px;
   
   border-radius: 50px;
   border-bottom: none;
@@ -1871,7 +1885,7 @@ img {
   width: 267px;
   margin: 0;
   margin-right: 134px;
-  padding-top: 19px;
+  padding-top: 16px;
   /*outline: 1px dashed yellow;*/ /* временно */
 }
 
@@ -1923,7 +1937,7 @@ img {
 
 .footer-info {
   width: 367px; /* исходно 327 */
-  padding: 16px 21px;
+  padding: 14px 21px;
   /*outline: 1px dashed yellow;*/ /* временно */
 }
 
@@ -2059,7 +2073,7 @@ img {
 
   width: 277px;
   background-color: #f8f7f4;
-  padding: 20px 15px; 
+  padding: 19px 17px 18px 19px; 
   margin-top: 4px;  
 
   border-radius: 6px;
@@ -2087,24 +2101,29 @@ img {
 .login-overlay input[type="email"],
 .login-overlay input[type="password"] {
   box-sizing: border-box;
-  width: 240px;
-  height: 44px;
+  width: 239px;
+  height: 45px;
 }
 
 .login-hints-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-}
+  align-items: flex-start;
 
-.login-hints-wrapper p {
   margin: 0;
   padding: 0;
 }
 
+.login-hints {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .login-hints a {
-  display: inline-block;
+  display: block;
 
   font-size: 13px;
   line-height: 24px;
@@ -2112,25 +2131,19 @@ img {
   color: #323232;
 
   text-decoration: none;
-  
-  /*box-shadow: 0 1px 0 0 rgba(50, 50, 50, 0.2);*/
-
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .login-hints a:hover,
 .login-hints a:focus {
   color: #e84d37;
   text-decoration: none;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: rgba(236, 89, 60, 0.3);
+  border-bottom: 1px solid rgba(236, 89, 60, 0.3);
 }
 
 .login-overlay .act-button {
   padding: 12px 25px;
+  height: 44px;
 }
 
 
@@ -2150,7 +2163,8 @@ img {
 
 /* Тёмный фон под модальным окном */
 
-/*.modal-overlay {
+.modal-overlay {
+  display: block;
   position: fixed;
   top: 0;
   left: 0;
@@ -2159,7 +2173,7 @@ img {
 
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 21; 
-}*/
+}
 
 .modal-feedback {
   display: none;
