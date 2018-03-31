@@ -87,16 +87,19 @@
                   <input type="password" name="password-field" id="password-field" placeholder="Пароль" required>
                 </p>
 
-                <div class="login-hints-wrapper">
-                  <div>
+                <div class="submit-hints-wrapper">
+                  
+                <div>
                   <button class="act-button" type="submit" name="login-button">
                     Войти
                   </button>
-                  </div>
+                </div>
+                  
                   <div class="login-hints">
                       <a href="#">Забыли пароль?</a>
                       <a href="#">Новая регистрация</a>
                   </div>
+
                 </div>
 
               </form>
@@ -109,44 +112,57 @@
           </a>
             <div class="cart-container">
               <table class="cart-content">
-                <tr>
-                  <td>
-                    <a class="delete" href="#" aria-label="Удалить">
-                    <span class="visually-hidden">Удалить</span>
-                  </a>
+                <tr class="visually-hidden">
+                  <th>Удалить</th>
+                  <th>Миниатюра</th>
+                  <th>Название</th>
+                  <th>Вес</th>
+                  <th>Цена</th>
+                </tr>
+                <tbody class="orders">
+                  <tr class="orders-row">
+                  <td class="order-row-discard">
+                    <a class="order-discard" href="#" title="Отменить"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/></svg>
+                      <span class="visually-hidden">Отмена</span>
+                    </a>
                   </td>
-                  <td>
+                  <td class="order-image">
                     <img src="img/ice-1-mini.png" width="33" height="33" alt="Название мороженого 1">
                   </td>
-                  <td>
-                    Пломбир с апельсиновым джемом
+                  <td class="order-name">
+                    <p>
+                      Пломбир с апельсиновым джемом
+                    </p>
                   </td>
-                  <td>
+                  <td class="order-amount">
                     1,5 кг x <span>200 руб.</span>
                   </td>
-                  <td>
+                  <td class="order-cost">
                     300 руб.
                   </td>
                 </tr>
-                <tr>
-                  <td>
-                    <a class="delete" href="#" aria-label="Удалить">
-                    <span class="visually-hidden">Удалить</span>
-                  </a>
+                <tr class="orders-row">
+                  <td class="order-row-discard">
+                    <a class="order-discard" href="#" title="Отменить"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/></svg>
+                      <span class="visually-hidden">Отмена</span>
+                    </a>
                   </td>
-                  <td>
+                  <td class="order-image">
                     <img src="img/ice-2-mini.png" width="33" height="33" alt="Название мороженого 2">
                   </td>
-                  <td>
-                    Клубничный пломбир с присыпкой из белого шоколада
+                  <td class="order-name">
+                    <p>
+                      Клубничный пломбир с присыпкой из белого шоколада
+                    </p>
                   </td>
-                  <td>
+                  <td class="order-amount">
                     1,5 кг x <span>300 руб.</span>
                   </td>
-                  <td>
+                  <td class="order-cost">
                     450 руб.
                   </td>
                 </tr>
+              </tbody>
               </table>
               <div class="cart-footer">
                 <p class="cart-sum">Итого: 750 руб.</p>
@@ -529,7 +545,7 @@
       <div class="pagination">
         <ul class="pagination-list">
           <li class="pag-item back disabled">
-            <a aria-label="Назад">
+            <a>
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8px" height="12px" viewBox="0 0 8 12" enable-background="new 0 0 8 12" xml:space="preserve">
                 <path fill="#ffffff" d="M 0.14774345,5.6734548 5.6557434,0.16445478 c 0.198,-0.198 0.519,-0.198 0.716,0 0.197,0.198 0.198,0.519 0,0.716 l -5.15,5.15100002 5.151,5.1500002 c 0.198,0.198 0.198,0.519 0,0.717 -0.099,0.099 -0.229,0.148 -0.358,0.148 -0.129,0 -0.259,-0.05 -0.358,-0.148 L 0.14774345,6.3894548 c -0.199,-0.198 -0.199,-0.518 0,-0.716 z" />
               </svg><span class="visually-hidden">Назад</span></a>
@@ -550,7 +566,7 @@
             <a href="#">5</a>
           </li>
           <li class="pag-item next">
-            <a href="#" aria-label="Вперёд">
+            <a href="#">
               <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
                 <path fill="#ffffff" d="M7.237 5.642L1.729.133a.506.506 0 1 0-.716.716L6.163 6l-5.151 5.15a.507.507 0 0 0 .716.717l5.509-5.509a.504.504 0 0 0 0-.716z" />
               </svg><span class="visually-hidden">Вперёд</span></a>
@@ -583,10 +599,10 @@
             <a href="#">Для поставщиков</a>
           </li>
           <li class="info-item">
-            <a href="#">О производстве</a>
+            <a href="#">Наши документы</a>
           </li>
           <li class="info-item">
-            <a href="#">Наши документы</a>
+            <a href="#">О производстве</a>
           </li>
           <li class="info-item">
             <a href="#">Экологические стандарты</a>
