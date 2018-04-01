@@ -422,64 +422,6 @@
     <div class="modal-overlay"></div>
   </div>
   </div>
-
-  <script>
-    var link = document.querySelector(".feedback-link");
-
-    var popup = document.querySelector(".modal-feedback");
-    var close = popup.querySelector(".modal-close");
-
-    var form = popup.querySelector("form");
-    var feedback-name = popup.querySelector("[name=feedback-user-name]");
-    var feedback-email = popup.querySelector("[name=feedback-user-email]");
-    var message = popup.querySelector("[name=feedback-field]");
-
-    var isStorageSupport = true;
-    var storage = "";
-  
-  try {
-    storage = localStorage.getItem("feedback-name");
-  } catch (err) {
-    isStorageSupport = false;
-  }
-
-    link.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.add("modal-show");
-
-      if (storage) {
-      feedback-name.value = storage;
-      feedback-email.focus();
-      } else {
-      feedback-name.focus();
-    }
-    });
-
-    close.addEventListener("click", function (evt)) {
-      evt.preventDefault();
-      popup.classList.remove("modal-show");
-    });
-
-    form.addEventListener("submit", function (evt) {
-      if (!feedback-name.value || !feedback-email.value || !feedback-field.value) {
-      evt.preventDefault();
-      console.log("Нужно ввести имя, email и текст сообщения");
-    } else {
-      if (isStorageSupport) {
-      localStorage.setItem("feedback-name", login.value);
-    }
-  }
-  });
-
-    window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      evt.preventDefault();
-      if (popup.classList.contains("modal-show")) {
-        popup.classList.remove("modal-show");
-      }
-    }
-  });
-  </script>
 </body>
 
 </html>
