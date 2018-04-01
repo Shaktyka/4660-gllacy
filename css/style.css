@@ -1608,6 +1608,7 @@ img {
 
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 30px;
+  border: 0;
 
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1618,6 +1619,10 @@ img {
   background-repeat: no-repeat;
   background-position: 168px center;
   background-size: 11px 10px;
+}
+
+.sort-container select::-ms-expand {
+    display: none;
 }
 
 .sort-container select:hover {
@@ -1906,9 +1911,6 @@ img {
   padding-left: 33px;
   padding-right: 19px;
   display: block;
-
-  /*padding-left: 30px;
-  padding-right: 20px;*/
   cursor: pointer;
 }
 
@@ -1919,8 +1921,6 @@ img {
   position: absolute;
   top: -2px;
   left: 0px;
-
-  /*background-image: url("../img/checkbox-off.svg");*/
   opacity: 0.8;
 
   width: 23px;
@@ -1968,12 +1968,13 @@ img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   
-  padding: 9px 27px 5px 27px;
+  padding: 7px 27px 7px 27px;
   margin-top: 23px;
 
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
+  vertical-align: middle;
   background-color: rgba(255, 255, 255, 0.2);
   color: #ffffff;
 
@@ -1990,7 +1991,7 @@ img {
 .filter-button:active {
   border: none;
   outline: none;
-  padding: 11px 29px 7px 29px;
+  padding: 9px 29px 9px 29px;
   -webkit-box-shadow: inset 0 2px 1px #696969;
           box-shadow: inset 0 2px 1px #696969;
 }
@@ -2233,6 +2234,7 @@ img {
   margin: 0; 
   padding: 0;
 
+  text-align: center;
   list-style: none;
 }
 
@@ -2240,37 +2242,54 @@ img {
   margin-right: 11px;
 }
 
-.social-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-
+.social {
+  display: block;
   width: 32px;
   height: 32px;
+  
+  font-size: 32px;
+  line-height: 32px;
+  vertical-align: middle;
 
   opacity: 0.8;
-
-  border-width: 3px;
-  border-style: solid;
+  border: 3px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
-  border-color: rgba(255, 255, 255, 0.5);
 }
 
-.social-button:hover,
-.social-button:focus {
+.social-tw {
+  background-image: url("../img/twitter.svg");
+  background-repeat: no-repeat; 
+  background-position: center center;
+}
+
+.social-in {
+  background-image: url("../img/instagram.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.social-fb {
+  background-image: url("../img/fb.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.social-vk {
+  background-image: url("../img/vk.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.social:hover,
+.social:focus {
   opacity: 1;
   border-color: rgba(255, 255, 255, 0.7);
 }
 
-.social-button:active {
+.social:active {
   opacity: 0.7;  
   border-color: rgba(255, 255, 255, 0.7);
+  box-shadow: inset 0px 1px 1px #888888;
 }
 
 
@@ -2390,7 +2409,6 @@ img {
   background-color: #f8f7f4;
   margin-top: 4px;
   padding: 20px 15px; 
-  /*margin-right: ???;*/
 
   border-radius: 6px;
   -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
@@ -2405,6 +2423,7 @@ img {
 }
 
 .search-form input[type="search"] {
+  box-sizing: border-box;
   width: 310px;
   height: 45px;
 }
@@ -2655,25 +2674,20 @@ p.textarea-field {
 
 /* Для скрытия */
 
-.visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-
-  -webkit-clip-path: inset(100%);
-
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+.visually-hidden, input[type="checkbox"].visually-hidden, input[type="radio"].visually-hidden {
+position: absolute;
+width: 1px;
+height: 1px;
+margin: -1px;
+border: 0;
+padding: 0;
+white-space: nowrap;
+clip-path: inset(100%);
+clip: rect(0 0 0 0);
+overflow: hidden;
 }
+
+
 
 
 
