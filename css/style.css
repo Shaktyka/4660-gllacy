@@ -354,8 +354,14 @@ img {
 
 /* Кнопки user-navigation */
 
-.user-navigation a:not(.cart-empty):hover,
-.user-navigation a:not(.cart-empty):focus {
+.user-navigation > a:not(.cart-empty):hover,
+.user-navigation > a:not(.cart-empty):focus {
+  color: #323232;
+  background-color: #f8f7f4;
+}
+
+.user-login-button a:hover, 
+.user-login-button a:focus {
   color: #323232;
   background-color: #f8f7f4;
 }
@@ -1009,6 +1015,10 @@ img {
 }
 
 .card-content-container a {
+  display: block;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
 
   font-size: 16px;
@@ -1017,17 +1027,20 @@ img {
   font-weight: 500;
 
   text-decoration: none;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: rgba(255, 255, 255, 0.3);
 
   vertical-align: top;
   z-index: 4;
 }
 
-.card-content-container a:hover,
-.card-content-container a:focus,
-.card-content-container a:active {
+.ice-name span {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.ice-name span:hover,
+.ice-name span:focus,
+.ice-name span:active {
   color: #f9ac9f;
   border-bottom-color: rgba(249, 172, 159, 0.3);
 
@@ -2065,19 +2078,20 @@ img {
 .ruble::after {
   content: "";
   position: absolute;
-  background-image: url("../img/ruble.svg");
+  background-image: url("../img/rub.svg");
   background-repeat: no-repeat;
   width: 31px;
   height: 36px;
-  top: 10px;
+  top: 12px;
   right: -4px;
-  text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
 .catalog-item-price .weight {
   font-size: 30px;
   line-height: 45px;
   font-weight: 700;  
+
+  text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
 
