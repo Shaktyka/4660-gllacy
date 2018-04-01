@@ -2263,6 +2263,10 @@ img {
   z-index: 21; 
 }
 
+.modal-show {
+  display: block;
+}
+
 .modal-feedback {
   display: none;
 
