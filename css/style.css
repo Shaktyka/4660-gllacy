@@ -763,6 +763,7 @@ img {
   display: block;
 }
 
+
 .banner-slogan {
   width: 700px;
   margin: 0 auto;
@@ -831,6 +832,25 @@ img {
   display: block;
 }
 
+#product-1:checked ~ .site-container {
+    background-color: #849d8f;
+    background-image: url("../img/double-ice-1.png");
+}
+#product-2:checked ~ .site-container {
+    background-color: #8996a6;
+    background-image: url("../img/double-ice-2.png");
+}
+#product-3:checked ~ .site-container {
+    background-color: #9d8b84;
+    background-image: url("../img/double-ice-3.png");
+}
+
+#product-1:checked ~ .site-container label[for="product-1"],
+#product-2:checked ~ .site-container label[for="product-2"],
+#product-3:checked ~ .site-container label[for="product-3"] {
+    background-color: #ffffff;
+}
+
 /* Спец. предложения */
 
 .main-spec-offers {
@@ -871,6 +891,7 @@ img {
 
   background-color: #6d1527;
   background-image: url("../img/rasp-back.jpg");
+  background-position: center top;
 
   border-radius: 15px;
 }
@@ -882,6 +903,7 @@ img {
 
   background-color: #3e251a;
   background-image: url("../img/choc-back.jpg");
+  background-position: center top;
 
   border-radius: 15px;
 }
@@ -1016,7 +1038,7 @@ img {
 
 .card-content-container a {
   display: block;
-  width: 250px;
+  width: 256px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -1370,14 +1392,11 @@ img {
   margin-bottom: 8px;
 }
 
-.map p {
+.map .static-map {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
-
-  margin: 0;
-  padding: 0;
 }
 
 .map iframe {
@@ -1385,6 +1404,11 @@ img {
   z-index: 2;
 
   border: none;
+}
+
+.map p {
+  margin: 0;
+  padding: 0;
 }
 
 .map img {
@@ -1873,6 +1897,13 @@ img {
 .filter-radio:disabled + label::after {
   opacity: 0.4;
 }
+
+.filter-radio + label:active::before, 
+.filter-radio:checked + label:active::after {
+  outline: none;
+}
+
+
 
 /* Фильтр по наполнителям */
 
