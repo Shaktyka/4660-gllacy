@@ -40,7 +40,7 @@
     });
 
     form.addEventListener("submit", function(evt) {
-      if (!userName.value || !userEmail.value || !message) {
+      if (!userName.value || !userEmail.value || !message.value) {
         popup.classList.remove("modal-error");
         popup.offsetWidth = popup.offsetWidth;
         popup.classList.add("modal-error");
