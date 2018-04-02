@@ -763,6 +763,7 @@ img {
   display: block;
 }
 
+
 .banner-slogan {
   width: 700px;
   margin: 0 auto;
@@ -831,6 +832,25 @@ img {
   display: block;
 }
 
+#product-1:checked ~ .site-container {
+    background-color: #849d8f;
+    background-image: url("../img/double-ice-1.png");
+}
+#product-2:checked ~ .site-container {
+    background-color: #8996a6;
+    background-image: url("../img/double-ice-2.png");
+}
+#product-3:checked ~ .site-container {
+    background-color: #9d8b84;
+    background-image: url("../img/double-ice-3.png");
+}
+
+#product-1:checked ~ .site-container label[for="product-1"],
+#product-2:checked ~ .site-container label[for="product-2"],
+#product-3:checked ~ .site-container label[for="product-3"] {
+    background-color: #ffffff;
+}
+
 /* Спец. предложения */
 
 .main-spec-offers {
@@ -871,6 +891,7 @@ img {
 
   background-color: #6d1527;
   background-image: url("../img/rasp-back.jpg");
+  background-position: center top;
 
   border-radius: 15px;
 }
@@ -882,6 +903,7 @@ img {
 
   background-color: #3e251a;
   background-image: url("../img/choc-back.jpg");
+  background-position: center top;
 
   border-radius: 15px;
 }
@@ -1016,7 +1038,7 @@ img {
 
 .card-content-container a {
   display: block;
-  width: 250px;
+  width: 256px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -1370,6 +1392,20 @@ img {
   margin-bottom: 8px;
 }
 
+.map .static-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.map iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
+}
+
 .map p {
   margin: 0;
   padding: 0;
@@ -1407,6 +1443,8 @@ img {
   padding: 28px 26px 32px 25px;
 
   border-radius: 15px;
+
+  z-index: 3;
 }
 
 .contacts-content {
@@ -1859,6 +1897,13 @@ img {
 .filter-radio:disabled + label::after {
   opacity: 0.4;
 }
+
+.filter-radio + label:active::before, 
+.filter-radio:checked + label:active::after {
+  outline: none;
+}
+
+
 
 /* Фильтр по наполнителям */
 
@@ -2548,6 +2593,46 @@ img {
 
 /* ОКНО ОБРАТНОЙ СВЯЗИ */
 
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal {
   position: fixed;
 
@@ -2562,7 +2647,6 @@ img {
 /* Тёмный фон под модальным окном */
 
 .modal-overlay {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -2571,10 +2655,6 @@ img {
 
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 21; 
-}
-
-.modal-show {
-  display: block;
 }
 
 .modal-feedback {
@@ -2590,6 +2670,16 @@ img {
 
   margin-left: -238px;
   padding: 15px 25px 25px 25px; 
+}
+
+.modal-show {
+  display: block;
+
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .feedback-content h2 {
